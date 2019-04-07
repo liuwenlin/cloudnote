@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="catalina">
+    <CLASSES>
+      <root url="jar://D:/Program Files/Tomcat9/apache-tomcat-9.0.16/lib/catalina.jar!/" />
+      <root url="jar://D:/Program Files/Tomcat9/apache-tomcat-9.0.16/lib/annotations-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

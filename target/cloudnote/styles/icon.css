@@ -7010,6 +7010,10 @@ button.close {
 	content: "\f08b"
 }
 
+.fa-envelope:before {
+	content: "\f0e0"
+}
+
 .fa-linkedin-square:before {
 	content: "\f08c"
 }

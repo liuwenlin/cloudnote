@@ -4,6 +4,11 @@ $(function(){
 	//登录功能
 	//console.log('Hello World!');
 	$('#login').click(loginAction);
+	$(window).keyup(function(e){
+		if(e.keyCode == 13){
+			loginAction();
+		}
+	});
 	$('#count').blur(checkName);
 	$('#password').blur(checkPassword);
 	
@@ -152,9 +157,12 @@ function loginAction(){
 			if(result.state==0){
 				//登录成功!
 				var user = result.data;
+				console.log("------print user info------")
 				console.log(user);
 				//登录成功以后将userId保存到cookie中
 				addCookie("userId", user.id);
+                addCookie("userName", user.name);
+                addCookie("userPassword", user.password);
 				//跳转到 edit.html
 				location.href='edit.html';
 			}else{

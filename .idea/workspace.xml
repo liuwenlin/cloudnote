@@ -6,9 +6,49 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9568f10c-6531-427a-a5b5-e49d8ef99e47" name="Default Changelist" comment="" />
+    <list default="true" id="9568f10c-6531-427a-a5b5-e49d8ef99e47" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/catalina.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/ConditionLockDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/CountDownLatchLockDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/CycleBarrierLockDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/SophomoreLockDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/mail_config.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/styles/mail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/conf/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/activity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/activity_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/activity_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/cookie_util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/cookie_util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/note.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/note.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/styles/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles/icon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/conf/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/conf/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cloudnote.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/cloudnote.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cloudnote/WEB-INF/classes/conf/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/cloudnote/WEB-INF/classes/conf/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cloudnote/activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cloudnote/activity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cloudnote/activity_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cloudnote/activity_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cloudnote/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cloudnote/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cloudnote/scripts/cookie_util.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/cloudnote/scripts/cookie_util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cloudnote/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/cloudnote/scripts/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cloudnote/scripts/note.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/cloudnote/scripts/note.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cloudnote/styles/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/cloudnote/styles/icon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cloudnote/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/cloudnote/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/../zookeeper_study/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,89 +66,114 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="cloud_note" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-758561157">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="17" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.27" value="2" />
+          <entry key="project.open.time.28" value="2" />
+          <entry key="project.open.time.29" value="4" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="6" />
-          <entry key="html" value="4" />
-          <entry key="java" value="34" />
-          <entry key="js" value="2" />
-          <entry key="jsp" value="2" />
-          <entry key="properties" value="4" />
-          <entry key="sql" value="3" />
-          <entry key="xml" value="19" />
+          <entry key="class" value="13" />
+          <entry key="css" value="17" />
+          <entry key="html" value="21" />
+          <entry key="ico" value="3" />
+          <entry key="java" value="101" />
+          <entry key="js" value="18" />
+          <entry key="jsp" value="4" />
+          <entry key="png" value="4" />
+          <entry key="properties" value="6" />
+          <entry key="sql" value="5" />
+          <entry key="ts" value="4" />
+          <entry key="xml" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="6" />
-          <entry key="HTML" value="4" />
-          <entry key="JAVA" value="34" />
-          <entry key="JSP" value="2" />
-          <entry key="JavaScript" value="2" />
-          <entry key="Properties" value="4" />
-          <entry key="Scratch" value="3" />
-          <entry key="XML" value="19" />
+          <entry key="CLASS" value="13" />
+          <entry key="CSS" value="17" />
+          <entry key="HTML" value="21" />
+          <entry key="Image" value="7" />
+          <entry key="JAVA" value="101" />
+          <entry key="JSP" value="4" />
+          <entry key="JavaScript" value="18" />
+          <entry key="Properties" value="6" />
+          <entry key="Scratch" value="5" />
+          <entry key="TypeScript" value="4" />
+          <entry key="XML" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7" />
-          <entry key="js" value="2" />
-          <entry key="properties" value="20" />
-          <entry key="sql" value="31" />
+          <entry key="css" value="361" />
+          <entry key="ft" value="48" />
+          <entry key="html" value="1190" />
+          <entry key="java" value="2033" />
+          <entry key="js" value="361" />
+          <entry key="properties" value="21" />
+          <entry key="sql" value="33" />
           <entry key="txt" value="11" />
-          <entry key="xml" value="152" />
+          <entry key="xml" value="266" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7" />
-          <entry key="JavaScript" value="2" />
+          <entry key="CSS" value="361" />
+          <entry key="HTML" value="1190" />
+          <entry key="JAVA" value="2033" />
+          <entry key="JavaScript" value="361" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Properties" value="20" />
-          <entry key="Scratch" value="31" />
-          <entry key="XML" value="152" />
+          <entry key="Properties" value="21" />
+          <entry key="Scratch" value="33" />
+          <entry key="VTL" value="48" />
+          <entry key="XML" value="266" />
         </counts>
       </usages-collector>
     </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="cloudnote" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2148">
-              <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
+            <state relative-caret-position="100">
+              <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/NotebookDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/StringUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            <state relative-caret-position="251">
+              <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#373#381#0" expanded="true" />
+                <element signature="e#1618#1619#0" expanded="true" />
+                <element signature="e#1645#1646#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,6 +183,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -126,22 +192,94 @@
     <findStrings>
       <find>basePackage</find>
       <find>findNoteById</find>
+      <find>UM</find>
+      <find>修改</find>
+      <find>footer</find>
+      <find>header</find>
+      <find>header-brand</find>
+      <find>hidden-xs</find>
+      <find>pull-right</find>
+      <find>glo</find>
+      <find>global</find>
+      <find>row</find>
+      <find>letter</find>
+      <find>h3</find>
+      <find>hidden</find>
       <find>login</find>
+      <find>log_in</find>
+      <find>&lt;a</find>
+      <find>fa</find>
+      <find>fa-</find>
+      <find>fa-sign-out</find>
+      <find>side_right</find>
+      <find>活动</find>
+      <find>profile-username</find>
+      <find>favico.ico</find>
+      <find>log</find>
+      <find>console.log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/styles/main.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/edit.html" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/JsonResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/NotebookDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/conf/jdbc.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/dc8ce6d5-5309-4801-971f-f3e04225b7d7/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/conf/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/client/CreateNodeDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/client/GetChildrenDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/client/GetDataDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/client/TestJVM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/config/ZookeeperCentralConfigurer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/config/ZookeeperPlaceholderConfigurer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/controller/Payment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/controller/PaymentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/controller/PaymentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/controller/PaymentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/curator/CreateNodeAsyncDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/curator/CreateNodeDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/curator/CreateSessionDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/curator/DeleteNodeDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/curator/NodeCacheDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/curator/UpdateDataDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/election/ElectionContextListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/election/ZkTomcatValve.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/lock/DistributeLock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/lock/ImproveLock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/lock/OrderCodeGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/lock/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/IStringCallback.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKAsyncDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKChildrenAsyncDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKChildrenDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKDataDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZkGetChildrenDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKOperateDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKSessionDemo.java" />
+        <option value="$PROJECT_DIR$/../zookeeper_study/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/CycleBarrierLockDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/CountDownLatchLockDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/ConditionLockDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/SophomoreLockDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/activity_detail.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mail_config.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/main.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/mail.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/icon.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/login.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/note.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/cookie_util.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/activity.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/edit.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/mail_config.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/StringUtils.java" />
       </list>
     </option>
   </component>
@@ -187,21 +325,22 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
     <option name="height" value="970" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <flattenPackages ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,142 +381,41 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="note" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="note" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="note" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="note" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="note" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="note" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="note" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552554449547" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554646566819" />
     <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zookeeper_study" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.45021644" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Develop workspace\idea\cloudnote\src\main\webapp" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Develop workspace\idea\cloudnote\src\main\webapp\styles" />
       <recent name="D:\Develop workspace\idea\cloudnote\src\main\resources\mapper" />
       <recent name="D:\Develop workspace\idea\cloudnote\src\main\resources\conf" />
       <recent name="D:\Develop workspace\idea\cloudnote\src\main\java\cn\tedu\note" />
       <recent name="D:\Develop workspace\idea\cloudnote\src\main\java\cn\tedu\note\entity" />
-      <recent name="D:\Develop workspace\idea\cloudnote\src\main\java\cn\tedu\note\dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -392,51 +430,68 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.cloudnote_server">
-    <configuration name="NoteDaoTest.testFindNoteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.StringUtils">
+    <configuration name="ConditionLockDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.lock.ConditionLockDemo" />
       <module name="cloudnote" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.tedu.note.test.*" />
+          <option name="PATTERN" value="cn.tedu.note.lock.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.NoteDaoTest" />
-      <option name="METHOD_NAME" value="testFindNoteById" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.testAddUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CountDownLatchLockDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.lock.CountDownLatchLockDemo" />
       <module name="cloudnote" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.tedu.note.test.*" />
+          <option name="PATTERN" value="cn.tedu.note.lock.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.UserDaoTest" />
-      <option name="METHOD_NAME" value="testAddUser" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.testFindUserByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CycleBarrierLockDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.lock.CycleBarrierLockDemo" />
       <module name="cloudnote" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.tedu.note.test.*" />
+          <option name="PATTERN" value="cn.tedu.note.lock.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.UserDaoTest" />
-      <option name="METHOD_NAME" value="testFindUserByName" />
-      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SophomoreLockDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.lock.SophomoreLockDemo" />
+      <module name="cloudnote" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.tedu.note.lock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.util.StringUtils" />
+      <module name="cloudnote" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.tedu.note.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -444,7 +499,6 @@
     <configuration name="cloudnote_server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.16" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/cloudnote/log_in.html" />
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
-      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="cloudnote:war exploded">
           <settings>
@@ -516,15 +570,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.cloudnote_server" />
-      <item itemvalue="JUnit.UserDaoTest.testFindUserByName" />
-      <item itemvalue="JUnit.UserDaoTest.testAddUser" />
-      <item itemvalue="JUnit.NoteDaoTest.testFindNoteById" />
+      <item itemvalue="Application.SophomoreLockDemo" />
+      <item itemvalue="Application.CycleBarrierLockDemo" />
+      <item itemvalue="Application.ConditionLockDemo" />
+      <item itemvalue="Application.CountDownLatchLockDemo" />
+      <item itemvalue="Application.StringUtils" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.NoteDaoTest.testFindNoteById" />
-        <item itemvalue="JUnit.UserDaoTest.testAddUser" />
-        <item itemvalue="JUnit.UserDaoTest.testFindUserByName" />
+        <item itemvalue="Application.StringUtils" />
+        <item itemvalue="Application.SophomoreLockDemo" />
+        <item itemvalue="Application.ConditionLockDemo" />
+        <item itemvalue="Application.CountDownLatchLockDemo" />
+        <item itemvalue="Application.CycleBarrierLockDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -542,7 +600,23 @@
       <workItem from="1552481610699" duration="7917000" />
       <workItem from="1552548097640" duration="1560000" />
       <workItem from="1552550815676" duration="3364000" />
-      <workItem from="1553135732244" duration="677000" />
+      <workItem from="1553135732244" duration="2323000" />
+      <workItem from="1553261540199" duration="941000" />
+      <workItem from="1553264290091" duration="2800000" />
+      <workItem from="1553362434524" duration="3597000" />
+      <workItem from="1553400222912" duration="1510000" />
+      <workItem from="1553402137444" duration="160000" />
+      <workItem from="1553402909880" duration="1998000" />
+      <workItem from="1553420366721" duration="2694000" />
+      <workItem from="1553425035978" duration="3663000" />
+      <workItem from="1553443653143" duration="186000" />
+      <workItem from="1553443861483" duration="663000" />
+      <workItem from="1553606629075" duration="6196000" />
+      <workItem from="1553779014258" duration="5950000" />
+      <workItem from="1553848771855" duration="2637000" />
+      <workItem from="1553916290719" duration="25855000" />
+      <workItem from="1554010117809" duration="11516000" />
+      <workItem from="1554639872526" duration="5247000" />
     </task>
     <servers />
   </component>
@@ -561,7 +635,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14108000" />
+    <option name="totallyTimeSpent" value="91367000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -573,20 +647,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26340482" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.23324397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.501006" side_tool="true" weight="0.2272118" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.4957507" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.33049646" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -595,14 +669,14 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.40567377" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.4283688" />
-      <window_info anchor="bottom" id="Application Servers" order="12" weight="0.32907802" />
-      <window_info anchor="bottom" id="Spring" order="13" weight="0.32907802" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.5368272" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.35602838" />
+      <window_info anchor="bottom" id="Spring" order="12" weight="0.32907802" />
+      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32907802" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32765958" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.5347518" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.28954422" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
@@ -627,272 +701,361 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.8.RELEASE/spring-webmvc-3.2.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar!/com/mysql/jdbc/Driver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="14" column="136" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/Note.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/NotebookNoteFoundExcepotion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/alert/alert_like.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.3/mybatis-spring-1.2.3.jar!/org/mybatis/spring/SqlSessionFactoryBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/JsonResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/UserDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.3/mybatis-spring-1.2.3.jar!/org/mybatis/spring/mapper/MapperScannerConfigurer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/NoteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/NoteDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/NotebookServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NoteMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="54" column="52" lean-forward="true" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/activity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        <state relative-caret-position="-546" />
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/concurrent/CyclicBarrier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3139">
+          <caret line="292" column="11" selection-start-line="292" selection-start-column="11" selection-end-line="292" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="305" column="32" selection-start-line="305" selection-start-column="32" selection-end-line="305" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="288" column="22" selection-start-line="288" selection-start-column="22" selection-end-line="288" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/concurrent/CountDownLatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/CycleBarrierLockDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/ConditionLockDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/controller/NotebookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/NotebookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/CountDownLatchLockDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/SophomoreLockDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/activity_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="170" column="26" selection-start-line="170" selection-start-column="26" selection-end-line="170" selection-end-column="26" />
+          <folding>
+            <element signature="e#7428#7434#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/PasswordException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/dummy/8986f28e.stilearn-logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/ue/umeditor.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="226">
+          <caret line="231" column="258" selection-start-line="231" selection-start-column="258" selection-end-line="231" selection-end-column="258" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/controller/AbstractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/controller/NotebookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/controller/NoteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/NoteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="262" column="11" lean-forward="true" selection-start-line="262" selection-start-column="11" selection-end-line="262" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/Comment.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NotebookMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/web/ImageServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/web/DemoFilter.java">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
-          <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <caret line="15920" column="45" selection-start-line="15920" selection-start-column="43" selection-end-line="15920" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/ue/dialogs/map/map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="399">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/aspectj/aspectjweaver/1.5.3/aspectjweaver-1.5.3.jar!/org/aspectj/lang/ProceedingJoinPoint.class">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Change_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1112">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="9486" column="7" selection-start-line="9486" selection-end-line="9486" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/prettify.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1957">
+          <caret line="134" column="23" selection-start-line="134" selection-start-column="23" selection-end-line="134" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/login_ghost.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2337" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/icon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="7012" column="21" lean-forward="true" selection-start-line="7012" selection-start-column="21" selection-end-line="7012" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/mail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="118" column="17" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/browser.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/aop/DemoAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/Filter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dc8ce6d5-5309-4801-971f-f3e04225b7d7/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/web/AccessFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/aop/DemoAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        <state relative-caret-position="-266">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/log_in.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
+        <state relative-caret-position="418">
           <caret line="40" column="66" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-610">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="42" lean-forward="true" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/JsonResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ico/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ico/favico.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/note.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="432" column="15" selection-start-line="432" selection-start-column="4" selection-end-line="432" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mail_config.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="112" column="33" lean-forward="true" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/cookie_util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="34" column="99" selection-start-line="34" selection-start-column="99" selection-end-line="34" selection-end-column="99" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="79">
+          <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/activity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="33" selection-end-column="77" />
+          <folding>
+            <element signature="e#2873#2879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="62" column="86" selection-start-line="62" selection-start-column="86" selection-end-line="62" selection-end-column="86" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#script#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#aside#0;n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2148">
-          <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
+        <state relative-caret-position="100">
+          <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/NotebookDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/StringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="251">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#373#381#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -907,6 +1070,7 @@
             <option name="proportions">
               <list>
                 <option value="0.45021644" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -961,7 +1125,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <last-edited>catalina</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -5,9 +5,12 @@ var ERROR = 1;
 
 $(function(){
 	
-	//var userId = getCookie('userId');
-	//console.log(userId);
-	
+	// var userName = getCookie('userName');
+    // console.log("------print user info------")
+	// console.log(userName);
+	//
+	// $("header .header-profile .profile-username").html(userName);
+
 	//网页加载以后, 立即读取笔记本列表
 	loadNotebooks();
 	//on() 方法绑定事件可以区别事件源
