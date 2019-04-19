@@ -9,6 +9,7 @@ import cn.tedu.note.entity.GoodsPlanLineEntity;
 import cn.tedu.note.entity.SingleVehicleWorkDurationEntity;
 import cn.tedu.note.entity.TransferPlanLineEntity;
 import cn.tedu.note.service.ISingleVehicleWorkDurationService;
+import cn.tedu.note.util.HttpUtil;
 import cn.tedu.note.util.MapApiTool;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -255,7 +256,7 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
 
         //6.关闭请求任务线程池
         MapApiTool.shutdown();
-
+        HttpUtil.closeClient();
         //7.关闭计算任务线程池
         this.shutdown();
 

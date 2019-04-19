@@ -36,9 +36,12 @@ public class HttpUtil {
         try {
             response = client.execute(get);
             HttpEntity entity = response.getEntity();
-            System.out.println("Status code: "+response.getStatusLine().getStatusCode());
-            String result = EntityUtils.toString(entity, "UTF-8");
-            return result;
+            if(response.getStatusLine().getStatusCode() == 200){
+                String result = EntityUtils.toString(entity, "UTF-8");
+                return result;
+            } else {
+                return "";
+            }
         } catch (ClientProtocolException e){
             e.printStackTrace();
         } catch (IOException e) {
