@@ -21,7 +21,7 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 	<!-- 配置组件扫描 -->
 	<context:component-scan 
-		base-package="cn.tedu.note.controller"/>
+		base-package="cn.tedu.note.*"/>
 	<!-- 配置MVC注解扫描 -->
 	<mvc:annotation-driven />
 	

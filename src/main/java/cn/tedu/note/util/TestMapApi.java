@@ -1,5 +1,9 @@
 package cn.tedu.note.util;
 
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+
 /**
  * @author liuwenlin
  * @version v1.0
@@ -23,6 +27,12 @@ class MapApiTask extends Thread {
     }
 
     public void run(){
-        HttpUtil.doGetRequest(url);
+        try {
+            HttpUtil.doGetRequest(url);
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
     }
 }

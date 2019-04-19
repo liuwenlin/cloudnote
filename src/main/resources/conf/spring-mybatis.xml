@@ -22,9 +22,12 @@
 	
 	<!-- 配置 spring-mybatis.xml -->
 	<!-- 读取配置文件 -->
+	<!--<util:properties id="jdbc"-->
+		<!--location="classpath:conf/jdbc.properties"/>-->
+
 	<util:properties id="jdbc"
-		location="classpath:conf/jdbc.properties"/> 
-	
+					 location="classpath:conf/jdbc_oracle.properties"/>
+
 	<!-- 配置数据库连接池 -->
 	<bean id="dataSource"
 		class="org.apache.commons.dbcp.BasicDataSource"
