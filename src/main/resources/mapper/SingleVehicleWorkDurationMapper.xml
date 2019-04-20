@@ -201,7 +201,7 @@
             ON FH.LOGIST_CODE = T.QYGS
             LEFT JOIN ORG DH
             ON DH.LOGIST_CODE = T.MDGS
-            WHERE ROWNUM &lt; 100
+        WHERE ROWNUM &lt; 10
 
         UNION ALL
 
@@ -249,7 +249,7 @@
             ON FH.LOGIST_CODE = XZ.QYGS
             LEFT JOIN ORG DH
             ON DH.LOGIST_CODE = XZ.MDGS
-            WHERE ROWNUM &lt; 100
+            WHERE ROWNUM &lt; 10
 	</select>
 
     <select id="getGoodsPlanLineList" resultMap="goodsPlanLineMap">
@@ -309,8 +309,7 @@
         AND SD.FCSJ &lt; TRUNC(SYSDATE)
         AND NOT REGEXP_LIKE(GS.GSJC, '(J|C|K)+')
         AND EXISTS (SELECT 1 FROM ZBC Z WHERE Z.CPH = TRIM(SD.CPH))
-        AND ROWNUM &lt; 1000
-
+        AND ROWNUM &lt; 10
         UNION ALL
 
         SELECT TRIM(T.CPH) cph,
@@ -353,7 +352,7 @@
         AND NOT REGEXP_LIKE(GS.GSJC, '(J|C|K)+')
         AND T.RKWCSJ &gt;= TRUNC(SYSDATE) - 1
         AND T.RKWCSJ &lt; TRUNC(SYSDATE)
-        AND ROWNUM &lt; 1000
+        AND ROWNUM &lt; 10
     </select>
     
     <resultMap id="goodsPlanLineMap" type="cn.tedu.note.entity.GoodsPlanLineEntity">

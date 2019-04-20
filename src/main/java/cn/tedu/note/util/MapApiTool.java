@@ -211,6 +211,7 @@ public class MapApiTool {
         if(es!=null){
             es.shutdown();
         }
+        HttpUtil.closeClient();
     }
 
 

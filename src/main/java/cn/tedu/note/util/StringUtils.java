@@ -137,6 +137,14 @@ public class StringUtils {
         }
     }
 
+    public static boolean isZeroAfterRemaind(int a, int b){
+        int c = a&(b-1);
+        if(c==0){
+            return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args){
         String[] strArray = {"city=上海市","address=上海市闵行区华翔路2239号","output=JSON"};
         String resultString = sortStringArray(strArray)+"2b1b8768a5d61cfa19b2454f847cbf1f";
@@ -144,5 +152,6 @@ public class StringUtils {
         System.out.println("-------------");
         System.out.println(md5ByNative(resultString));
         System.out.println(md5BySpring(resultString));
+        System.out.println(isZeroAfterRemaind(47,16));
     }
 }

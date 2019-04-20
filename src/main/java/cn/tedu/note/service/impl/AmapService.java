@@ -117,10 +117,10 @@ public class AmapService implements IAmapService {
         for(GoodsOrdersEntity order:goodsPlanLineEntity.getOrderGeoCodeList()){
             AmapApiGeocodeMultiEntity geocodeMultiResult = multiEntityMap.get(order.getYdbh());
             if(geocodeMultiResult.getGeocode() == null){
-                System.out.println("当前地理编码通过geocodeFuture返回");
+//                System.out.println("当前地理编码通过geocodeFuture返回");
                 order.setGeocode(geocodeMultiResult.getFutureGeocode().get());
             } else {
-                System.out.println("当前地理编码通过geocode返回");
+//                System.out.println("当前地理编码通过geocode返回");
                 order.setGeocode(geocodeMultiResult.getGeocode());
             }
         }
@@ -160,7 +160,12 @@ public class AmapService implements IAmapService {
         } else {
             System.out.println("送货单列表大于16单的情况------");
             //将运单明细按照地图api路径规划途径地最大数量分成若干段
-            int count = deliverGoodsListSize / AmapApiConstants.WAYPOINTS_MAX_NUM + 1;
+            int count;
+            if(isZeroAfterRemaind(deliverGoodsListSize,AmapApiConstants.WAYPOINTS_MAX_NUM)){ //判断运单明细数量是否为途径地的整数倍
+                count = deliverGoodsListSize / AmapApiConstants.WAYPOINTS_MAX_NUM;
+            } else {
+                count = deliverGoodsListSize / AmapApiConstants.WAYPOINTS_MAX_NUM + 1;
+            }
             for(int i = 0; i < count; i++){ //第一个分段
                 StringBuffer strBuff = new StringBuffer();
                 if(i == 0){
@@ -194,7 +199,7 @@ public class AmapService implements IAmapService {
                 } else { //中间分段
                     strBuff.append(AmapApiConstants.ROUTE_PLANNING_URL);
                     strBuff.append("&origin=").append(goodsPlanLineEntity.getOrderGeoCodeList().get(i*AmapApiConstants.WAYPOINTS_MAX_NUM).getGeocode());
-                    strBuff.append("&destination=").append(goodsPlanLineEntity.getOrderGeoCodeList().get((i+1)*AmapApiConstants.WAYPOINTS_MAX_NUM).getGeocode());
+                    strBuff.append("&destination=").append(goodsPlanLineEntity.getOrderGeoCodeList().get((i+1)*AmapApiConstants.WAYPOINTS_MAX_NUM - 1).getGeocode());
                     strBuff.append("&waypoints=");
                     for(int j = 1; j < AmapApiConstants.WAYPOINTS_MAX_NUM; j++){
                         strBuff.append(goodsPlanLineEntity.getOrderGeoCodeList().get(i*AmapApiConstants.WAYPOINTS_MAX_NUM + j).getGeocode()).append(";");
@@ -229,5 +234,19 @@ public class AmapService implements IAmapService {
         strBuff.substring(0,strBuff.length()-1);
         System.out.println("路径规划请求url为:"+strBuff.toString());
         return strBuff.toString();
+    }
+
+    /**
+     * 与运算取余数,参数b必须为2的整数倍
+     * @param a
+     * @param b
+     * @return
+     */
+    private boolean isZeroAfterRemaind(int a, int b){
+        int c = a&(b-1);
+        if(c==0){
+            return true;
+        }
+        return false;
     }
 }

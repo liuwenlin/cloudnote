@@ -158,44 +158,43 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
         List<GoodsPlanLineEntity> goodsBillsList
                 = singleVehicleWorkDurationMapper.getGoodsPlanLineList();
 
+        Long startTime = System.currentTimeMillis();
+
         //4.提交数据计算任务
         //4.1 上下转移线路发车到车公司地理编码检测
         for(TransferPlanLineEntity transferPlan:transferPlanLineList){
             doTransferGeocodingCompleteService.submit(new TransferPlanGeocodeTask(transferPlan));
-            Thread.sleep(10);
+            Thread.sleep(6);
         }
 
         //4.2 提送货运单地理编码计算
         for(GoodsPlanLineEntity goodsBill:goodsBillsList){
             doGeocodingCompleteService.submit(new GeocodingTask(goodsBill));
-            Thread.sleep(10);
+            Thread.sleep(6);
         }
 
         //4.3 上下转移线路发车到车公司路径规划计算
         for(TransferPlanLineEntity transferPlan:transferPlanLineList){
             Future<TransferPlanLineEntity> future = doTransferGeocodingCompleteService.take();
             doTransferRoutePlanningCompleteService.submit(new TransferPlanRouteTask(future.get()));
-            System.out.println("当前转移线路经过地理编码计算后的结果: "+future.get());
-            Thread.sleep(25);
+            Thread.sleep(22);
         }
 
         //4.4 提送货线路路径规划距离计算
         for(GoodsPlanLineEntity goodsBill:goodsBillsList){
             Future<GoodsPlanLineEntity> future = doGeocodingCompleteService.take();
-            GoodsPlanLineEntity geocode = future.get();
-            System.out.println("地理编码返回的提送货单为: "+geocode);
-            doRoutePlanningCompleteService.submit(new RoutePlanningTask(geocode));
-            Thread.sleep(25);
+            doRoutePlanningCompleteService.submit(new RoutePlanningTask(future.get()));
+            Thread.sleep(22);
         }
 
         //4.5 上下转移线路路径规划距离获取
         for(TransferPlanLineEntity transferPlan:transferPlanLineList){
             Future<TransferPlanLineEntity> future = doTransferRoutePlanningCompleteService.take();
             TransferPlanLineEntity tp = future.get();
-            System.out.println("当前转移线路: " + tp.getLine()
-                    + " 车牌号为: " + tp.getCph()
-                    + " 当前转移线路路径规划结果距离为: " + tp.getPlannedDistance());
-            if(tp.getType() == TransferType.UP_TRANFER.getTypeMsg()){
+//            System.out.println("当前转移线路: " + tp.getLine()
+//                    + " 车牌号为: " + tp.getCph()
+//                    + " 当前转移线路路径规划结果距离为: " + tp.getPlannedDistance());
+            if(TransferType.UP_TRANFER.getTypeMsg().equals(tp.getType())){
                 int lc = resultMap.get(tp.getCph()).getSzylc() == null?0:resultMap.get(tp.getCph()).getSzylc();
                 double dw = resultMap.get(tp.getCph()).getSzydw() == null?0:resultMap.get(tp.getCph()).getSzydw();
                 resultMap.get(tp.getCph()).setSzylc(lc + tp.getPlannedDistance());
@@ -212,11 +211,11 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
         for(GoodsPlanLineEntity goodsBill:goodsBillsList){
             Future<GoodsPlanLineEntity> future = doRoutePlanningCompleteService.take();
             GoodsPlanLineEntity gp = future.get();
-            System.out.println("当前送货单为: " + gp.getGoodsBill()
-                    + " 车牌号为: " + gp.getCph()
-                    + " 编号类型: " + gp.getBillType());
-            System.out.println("当前送货单路径规划结果距离为: " + gp);
-            if(gp.getBillType() == BillType.DELIVER_GOODS.getTypeMsg()){
+//            System.out.println("当前送货单为: " + gp.getGoodsBill()
+//                    + " 车牌号为: " + gp.getCph()
+//                    + " 编号类型: " + gp.getBillType());
+//            System.out.println("当前送货单路径规划结果距离为: " + gp);
+            if(BillType.DELIVER_GOODS.getTypeMsg().equals(gp.getBillType())){
                 int lc = resultMap.get(gp.getCph()).getPjghlc() == null?0:resultMap.get(gp.getCph()).getPjghlc();
                 resultMap.get(gp.getCph()).setPjghlc(lc + gp.getGoodsDistance());
                 int js = 0;
@@ -252,11 +251,13 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
         singleVehicleWorkDurationMapper.batchInsertSingleVehicleWorkDurationInfo(
                 new LinkedList<SingleVehicleWorkDurationEntity>(resultMap.values()));
 
-        System.out.println("统计结果插入数据库完毕!");
+        Long endTime = System.currentTimeMillis();
+
+        System.out.println("统计结果插入数据库完毕! 总耗时为: " + (endTime - startTime)/1000 +"秒");
 
         //6.关闭请求任务线程池
         MapApiTool.shutdown();
-        HttpUtil.closeClient();
+
         //7.关闭计算任务线程池
         this.shutdown();
 
