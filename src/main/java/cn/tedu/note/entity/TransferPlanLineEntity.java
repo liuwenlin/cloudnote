@@ -60,6 +60,11 @@ public class TransferPlanLineEntity {
     private Double zydw;
 
     /**
+     * 上下转移体积
+     */
+    private Double zytj;
+
+    /**
      * 发车类型
      */
     private String type;
@@ -67,7 +72,7 @@ public class TransferPlanLineEntity {
     public TransferPlanLineEntity() {
     }
 
-    public TransferPlanLineEntity(String cph, String line, String startCity, String startAddress, String startGeoCode, String endCity, String endGeoCode, String endAddress, Integer plannedDistance, Double zydw, String type) {
+    public TransferPlanLineEntity(String cph, String line, String startCity, String startAddress, String startGeoCode, String endCity, String endGeoCode, String endAddress, Integer plannedDistance, Double zydw, Double zytj, String type) {
         this.cph = cph;
         this.line = line;
         this.startCity = startCity;
@@ -78,6 +83,7 @@ public class TransferPlanLineEntity {
         this.endAddress = endAddress;
         this.plannedDistance = plannedDistance;
         this.zydw = zydw;
+        this.zytj = zytj;
         this.type = type;
     }
 
@@ -161,6 +167,14 @@ public class TransferPlanLineEntity {
         this.zydw = zydw;
     }
 
+    public Double getZytj() {
+        return zytj;
+    }
+
+    public void setZytj(Double zytj) {
+        this.zytj = zytj;
+    }
+
     public String getType() {
         return type;
     }
@@ -188,6 +202,7 @@ public class TransferPlanLineEntity {
                 .append(getEndAddress(), that.getEndAddress())
                 .append(getPlannedDistance(), that.getPlannedDistance())
                 .append(getZydw(), that.getZydw())
+                .append(getZytj(), that.getZytj())
                 .append(getType(), that.getType())
                 .isEquals();
     }
@@ -205,6 +220,7 @@ public class TransferPlanLineEntity {
                 .append(getEndAddress())
                 .append(getPlannedDistance())
                 .append(getZydw())
+                .append(getZytj())
                 .append(getType())
                 .toHashCode();
     }
@@ -222,6 +238,7 @@ public class TransferPlanLineEntity {
                 ", endAddress='" + endAddress + '\'' +
                 ", plannedDistance=" + plannedDistance +
                 ", zydw=" + zydw +
+                ", zytj=" + zytj +
                 ", type='" + type + '\'' +
                 '}';
     }

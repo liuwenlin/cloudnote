@@ -4,15 +4,11 @@ import cn.tedu.note.constant.BillType;
 import cn.tedu.note.constant.SystemConsts;
 import cn.tedu.note.constant.TransferType;
 import cn.tedu.note.dao.SingleVehicleWorkDurationMapper;
-import cn.tedu.note.entity.GoodsOrdersEntity;
-import cn.tedu.note.entity.GoodsPlanLineEntity;
-import cn.tedu.note.entity.SingleVehicleWorkDurationEntity;
-import cn.tedu.note.entity.TransferPlanLineEntity;
+import cn.tedu.note.entity.*;
+import cn.tedu.note.service.IAmapService;
 import cn.tedu.note.service.ISingleVehicleWorkDurationService;
-import cn.tedu.note.util.HttpUtil;
 import cn.tedu.note.util.MapApiTool;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -31,10 +27,10 @@ import java.util.concurrent.*;
 public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurationService {
 
     @Resource
-    AmapService amapService;
+    private IAmapService amapService;
 
     @Resource
-    SingleVehicleWorkDurationMapper singleVehicleWorkDurationMapper;
+    private SingleVehicleWorkDurationMapper singleVehicleWorkDurationMapper;
 
     /**
      * 地理编码解析服务
@@ -57,14 +53,6 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
 
     private static CompletionService doTransferRoutePlanningCompleteService
             = new ExecutorCompletionService(doRoutePlanningService);
-
-//    /**
-//     * 测试使用构造函数
-//     * @param amapService
-//     */
-//    public SingleVehicleWorkDurationService(AmapService amapService){
-//        this.amapService = amapService;
-//    }
 
     /**
      * 计算上下转移线路地理编码的FutureTask
@@ -100,20 +88,207 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
         }
     }
 
+//    /**
+//     * 计算运单地理编码的FutureTask
+//     */
+//    private class GeocodingTask implements Callable<GoodsPlanLineEntity> {
+//
+//        GoodsPlanLineEntity goodsPlanLineEntity;
+//
+//        public GeocodingTask(GoodsPlanLineEntity goodsPlanLineEntity){
+//            this.goodsPlanLineEntity = goodsPlanLineEntity;
+//        }
+//
+//        @Override
+//        public GoodsPlanLineEntity call() throws Exception {
+//            GoodsPlanLineEntity goodsBill = amapService.captureGeocoding(goodsPlanLineEntity);
+//            return goodsBill;
+//        }
+//    }
+//
+//    /**
+//     * 计算提送货路径规划的FutureTask
+//     */
+//    private class RoutePlanningTask implements Callable<GoodsPlanLineEntity> {
+//
+//        private GoodsPlanLineEntity goodsPlanLineEntity;
+//
+//        public RoutePlanningTask(GoodsPlanLineEntity goodsPlanLineEntity){
+//            this.goodsPlanLineEntity = goodsPlanLineEntity;
+//        }
+//
+//        @Override
+//        public GoodsPlanLineEntity call() throws Exception {
+//            GoodsPlanLineEntity deliverGoodsBill = amapService.captureRoutePlanning(goodsPlanLineEntity);
+//            return deliverGoodsBill;
+//        }
+//    }
+
+//    @Override
+//    public void computeSingleVehicleWorkDuration() throws InterruptedException, ExecutionException {
+//
+//        //1.首先获取计算车辆的实体Map(预先加载车牌号的基础信息,待需完成字段计算完成后,然后持久化)
+//        Map<String, SingleVehicleWorkDurationEntity> resultMap
+//                = new HashMap<String, SingleVehicleWorkDurationEntity>();
+//
+//        List<SingleVehicleWorkDurationEntity> entityList
+//                = singleVehicleWorkDurationMapper.getSingleVehicleWorkDurationList();
+//        //将返回的list集合中的SingleVehicleWorkDurationEntity对象
+//        for(SingleVehicleWorkDurationEntity entity : entityList){
+//            resultMap.put(entity.getCph(),entity);
+//        }
+//
+//        //2.再获取上下转移线路串线车辆信息
+//        List<TransferPlanLineEntity> transferPlanLineList
+//                = singleVehicleWorkDurationMapper.getTransferPlanLineList();
+//
+//        //3.最后获取取派件线路信息
+//        List<GoodsPlanLineEntity> goodsBillsList
+//                = singleVehicleWorkDurationMapper.getGoodsPlanLineList();
+//
+//        Map<String,List<GoodsPlanLineEntity>> deliverVehicleMap = new HashMap<String,List<GoodsPlanLineEntity>>();
+//
+//        Map<String,List<GoodsPlanLineEntity>> pickupVehicleMap = new HashMap<String,List<GoodsPlanLineEntity>>();
+//
+//        Long startTime = System.currentTimeMillis();
+//
+//        //4.提交数据计算任务
+//        //4.1 上下转移线路发车到车公司地理编码检测
+//        for(TransferPlanLineEntity transferPlan:transferPlanLineList){
+//            doTransferGeocodingCompleteService.submit(new TransferPlanGeocodeTask(transferPlan));
+//            Thread.sleep(6);
+//        }
+//
+//        //4.2 提送货运单地理编码计算
+//        for(GoodsPlanLineEntity goodsBill:goodsBillsList){
+//            doGeocodingCompleteService.submit(new GeocodingTask(goodsBill));
+//            if(BillType.DELIVER_GOODS.getTypeMsg().equals(goodsBill.getBillType())){
+//                setVehicleMap(deliverVehicleMap, goodsBill);
+//            } else {
+//                setVehicleMap(pickupVehicleMap, goodsBill);
+//            }
+//            Thread.sleep(6);
+//        }
+//
+//        //4.3 上下转移线路发车到车公司路径规划计算
+//        for(TransferPlanLineEntity transferPlan:transferPlanLineList){
+//            Future<TransferPlanLineEntity> future = doTransferGeocodingCompleteService.take();
+//            doTransferRoutePlanningCompleteService.submit(new TransferPlanRouteTask(future.get()));
+//            Thread.sleep(22);
+//        }
+//
+//        //4.4 提送货线路路径规划距离计算
+//        for(GoodsPlanLineEntity goodsBill:goodsBillsList){
+//            Future<GoodsPlanLineEntity> future = doGeocodingCompleteService.take();
+//            GoodsPlanLineEntity entity = future.get();
+//            if(BillType.DELIVER_GOODS.getTypeMsg().equals(entity.getBillType())){
+//                if(!pickupVehicleMap.containsKey(entity.getCph())){
+//                    doRoutePlanningCompleteService.submit(new RoutePlanningTask(entity));
+//                } else {
+//
+//                }
+//            } else {
+//                if(!deliverVehicleMap.containsKey(entity.getCph())){
+//                    doRoutePlanningCompleteService.submit(new RoutePlanningTask(entity));
+//                } else {
+//
+//                }
+//            }
+//
+//            doRoutePlanningCompleteService.submit(new RoutePlanningTask(future.get()));
+//            Thread.sleep(22);
+//        }
+//
+//        //4.5 上下转移线路路径规划距离获取
+//        for(TransferPlanLineEntity transferPlan:transferPlanLineList){
+//            Future<TransferPlanLineEntity> future = doTransferRoutePlanningCompleteService.take();
+//            TransferPlanLineEntity tp = future.get();
+////            System.out.println("当前转移线路: " + tp.getLine()
+////                    + " 车牌号为: " + tp.getCph()
+////                    + " 当前转移线路路径规划结果距离为: " + tp.getPlannedDistance());
+//            if(TransferType.UP_TRANFER.getTypeMsg().equals(tp.getType())){
+//                int lc = resultMap.get(tp.getCph()).getSzylc() == null?0:resultMap.get(tp.getCph()).getSzylc();
+//                double dw = resultMap.get(tp.getCph()).getSzydw() == null?0:resultMap.get(tp.getCph()).getSzydw();
+//                resultMap.get(tp.getCph()).setSzylc(lc + tp.getPlannedDistance());
+//                resultMap.get(tp.getCph()).setSzydw(dw + tp.getZydw());
+//            } else {
+//                int lc = resultMap.get(tp.getCph()).getXzylc() == null?0:resultMap.get(tp.getCph()).getXzylc();
+//                double dw = resultMap.get(tp.getCph()).getXzydw() == null?0:resultMap.get(tp.getCph()).getXzydw();
+//                resultMap.get(tp.getCph()).setXzylc(lc + tp.getPlannedDistance());
+//                resultMap.get(tp.getCph()).setXzydw(dw + tp.getZydw());
+//            }
+//        }
+//
+//        //4.6 提送货线路路径规划距离获取
+//        for(GoodsPlanLineEntity goodsBill:goodsBillsList){
+//            Future<GoodsPlanLineEntity> future = doRoutePlanningCompleteService.take();
+//            GoodsPlanLineEntity gp = future.get();
+////            System.out.println("当前送货单为: " + gp.getGoodsBill()
+////                    + " 车牌号为: " + gp.getCph()
+////                    + " 编号类型: " + gp.getBillType());
+////            System.out.println("当前送货单路径规划结果距离为: " + gp);
+//            if(BillType.DELIVER_GOODS.getTypeMsg().equals(gp.getBillType())){
+//                int lc = resultMap.get(gp.getCph()).getPjghlc() == null?0:resultMap.get(gp.getCph()).getPjghlc();
+//                resultMap.get(gp.getCph()).setPjghlc(lc + gp.getGoodsDistance());
+//                int js = 0;
+//                double dw = 0;
+//                for(GoodsOrdersEntity order:gp.getOrderGeoCodeList()){
+//                    js = js + order.getCountOfOrder();
+//                    dw = dw + order.getTon();
+//                }
+//                resultMap.get(gp.getCph()).setPjjs(js);
+//                resultMap.get(gp.getCph()).setPjdw(dw);
+//            } else {
+//                int lc = resultMap.get(gp.getCph()).getQjghlc() == null?0:resultMap.get(gp.getCph()).getQjghlc();
+//                resultMap.get(gp.getCph()).setQjghlc(lc + gp.getGoodsDistance());
+//                int js = 0;
+//                double dw = 0;
+//                for(GoodsOrdersEntity order:gp.getOrderGeoCodeList()){
+//                    js = js + order.getCountOfOrder();
+//                    dw = dw + order.getTon();
+//                }
+//                resultMap.get(gp.getCph()).setQjjs(js);
+//                resultMap.get(gp.getCph()).setQjdw(dw);
+//            }
+//        }
+//
+////        for(SingleVehicleWorkDurationEntity entity : resultMap.values()){
+////            if(entity.getSzydw() != null || entity.getXzydw() != null
+////                    || entity.getPjdw() != null || entity.getQjdw() != null){
+////                System.out.println("统计计算结果如下\n" + entity);
+////            }
+////        }
+//
+//        //5.将统计计算结果插入数据库中
+//        singleVehicleWorkDurationMapper.batchInsertSingleVehicleWorkDurationInfo(
+//                new LinkedList<SingleVehicleWorkDurationEntity>(resultMap.values()));
+//
+//        Long endTime = System.currentTimeMillis();
+//
+//        System.out.println("统计结果插入数据库完毕! 总耗时为: " + (endTime - startTime)/1000 +"秒");
+//
+//        //6.关闭请求任务线程池
+//        MapApiTool.shutdown();
+//
+//        //7.关闭计算任务线程池
+//        this.shutdown();
+//
+//    }
+
     /**
      * 计算运单地理编码的FutureTask
      */
-    private class GeocodingTask implements Callable<GoodsPlanLineEntity> {
+    private class GeocodingTask implements Callable<VehiclePlanLineEntity> {
 
-        GoodsPlanLineEntity goodsPlanLineEntity;
+        private VehiclePlanLineEntity vehiclePlanLineEntity;
 
-        public GeocodingTask(GoodsPlanLineEntity goodsPlanLineEntity){
-            this.goodsPlanLineEntity = goodsPlanLineEntity;
+        public GeocodingTask(VehiclePlanLineEntity vehiclePlanLineEntity){
+            this.vehiclePlanLineEntity = vehiclePlanLineEntity;
         }
 
         @Override
-        public GoodsPlanLineEntity call() throws Exception {
-            GoodsPlanLineEntity goodsBill = amapService.captureGeocoding(goodsPlanLineEntity);
+        public VehiclePlanLineEntity call() throws Exception {
+            VehiclePlanLineEntity goodsBill = amapService.captureGeocoding(vehiclePlanLineEntity);
             return goodsBill;
         }
     }
@@ -121,17 +296,20 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
     /**
      * 计算提送货路径规划的FutureTask
      */
-    private class RoutePlanningTask implements Callable<GoodsPlanLineEntity> {
+    private class RoutePlanningTask implements Callable<VehiclePlanLineEntity> {
 
-        private GoodsPlanLineEntity goodsPlanLineEntity;
+        private VehiclePlanLineEntity vehiclePlanLineEntity;
 
-        public RoutePlanningTask(GoodsPlanLineEntity goodsPlanLineEntity){
-            this.goodsPlanLineEntity = goodsPlanLineEntity;
+        private String startGeocode;
+
+        public RoutePlanningTask(String startGeocode,VehiclePlanLineEntity vehiclePlanLineEntity){
+            this.vehiclePlanLineEntity = vehiclePlanLineEntity;
+            this.startGeocode = startGeocode;
         }
 
         @Override
-        public GoodsPlanLineEntity call() throws Exception {
-            GoodsPlanLineEntity deliverGoodsBill = amapService.captureRoutePlanning(goodsPlanLineEntity);
+        public VehiclePlanLineEntity call() throws Exception {
+            VehiclePlanLineEntity deliverGoodsBill = amapService.captureRoutePlanning(startGeocode,vehiclePlanLineEntity);
             return deliverGoodsBill;
         }
     }
@@ -141,22 +319,26 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
 
         //1.首先获取计算车辆的实体Map(预先加载车牌号的基础信息,待需完成字段计算完成后,然后持久化)
         Map<String, SingleVehicleWorkDurationEntity> resultMap
-                = new HashMap<String, SingleVehicleWorkDurationEntity>();
+                = singleVehicleWorkDurationMapper.getSingleVehicleWorkDurationMap();
 
-        List<SingleVehicleWorkDurationEntity> entityList
-                = singleVehicleWorkDurationMapper.getSingleVehicleWorkDurationList();
-        //将返回的list集合中的SingleVehicleWorkDurationEntity对象
-        for(SingleVehicleWorkDurationEntity entity : entityList){
-            resultMap.put(entity.getCph(),entity);
-        }
+//        List<SingleVehicleWorkDurationEntity> entityList
+//                = singleVehicleWorkDurationMapper.getSingleVehicleWorkDurationList();
+//
+//        //将返回的list集合中的SingleVehicleWorkDurationEntity对象
+//        for(SingleVehicleWorkDurationEntity entity : entityList){
+//            resultMap.put(entity.getCph(),entity);
+//        }
 
         //2.再获取上下转移线路串线车辆信息
         List<TransferPlanLineEntity> transferPlanLineList
                 = singleVehicleWorkDurationMapper.getTransferPlanLineList();
 
         //3.最后获取取派件线路信息
-        List<GoodsPlanLineEntity> goodsBillsList
-                = singleVehicleWorkDurationMapper.getGoodsPlanLineList();
+        Map<String,VehiclePlanLineEntity> deliverVehicleMap
+                = singleVehicleWorkDurationMapper.getDeliverGoodsPlanLineMap();
+
+        Map<String,VehiclePlanLineEntity> pickupVehicleMap
+                = singleVehicleWorkDurationMapper.getPickupGoodsPlanLineMap();
 
         Long startTime = System.currentTimeMillis();
 
@@ -168,9 +350,12 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
         }
 
         //4.2 提送货运单地理编码计算
-        for(GoodsPlanLineEntity goodsBill:goodsBillsList){
-            doGeocodingCompleteService.submit(new GeocodingTask(goodsBill));
-            Thread.sleep(6);
+        for(VehiclePlanLineEntity entity:deliverVehicleMap.values()){
+            doGeocodingCompleteService.submit(new GeocodingTask(entity));
+        }
+
+        for(VehiclePlanLineEntity entity:pickupVehicleMap.values()){
+            doGeocodingCompleteService.submit(new GeocodingTask(entity));
         }
 
         //4.3 上下转移线路发车到车公司路径规划计算
@@ -180,10 +365,36 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
             Thread.sleep(22);
         }
 
-        //4.4 提送货线路路径规划距离计算
-        for(GoodsPlanLineEntity goodsBill:goodsBillsList){
-            Future<GoodsPlanLineEntity> future = doGeocodingCompleteService.take();
-            doRoutePlanningCompleteService.submit(new RoutePlanningTask(future.get()));
+        //4.4.1 送货线路路径规划距离计算
+        for(VehiclePlanLineEntity vehiclePlan:deliverVehicleMap.values()){
+            Future<VehiclePlanLineEntity> future = doGeocodingCompleteService.take();
+            VehiclePlanLineEntity entity = future.get();
+
+            doRoutePlanningCompleteService.submit(new RoutePlanningTask(entity.getStoreGeoCode(),entity));
+            Thread.sleep(22);
+        }
+
+        //4.4.2提货线路路径规划距离计算
+        for(VehiclePlanLineEntity vehiclePlan:pickupVehicleMap.values()){
+            Future<VehiclePlanLineEntity> future = doGeocodingCompleteService.take();
+            VehiclePlanLineEntity entity = future.get();
+
+            /**
+             * 判断当前提货单的车牌号再送货单中是否有值:
+             * 1.如果有,则根据送货单的最后一票进行路径规划计算,
+             * 2.如果没有则直接根据当前提货单的门店编码进行计算.
+             */
+            if(deliverVehicleMap.get(entity.getCph()) == null){
+                doRoutePlanningCompleteService.submit(
+                        new RoutePlanningTask(entity.getStoreGeoCode(),entity));
+            } else {
+                int index = deliverVehicleMap.get(entity.getCph()).getOrderGeoCodeList().size() - 1;
+                doRoutePlanningCompleteService.submit(
+                        new RoutePlanningTask(
+                                deliverVehicleMap.get(entity.getCph()).getOrderGeoCodeList()
+                                        .get(index).getGeocode(),entity));
+            }
+
             Thread.sleep(22);
         }
 
@@ -191,61 +402,41 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
         for(TransferPlanLineEntity transferPlan:transferPlanLineList){
             Future<TransferPlanLineEntity> future = doTransferRoutePlanningCompleteService.take();
             TransferPlanLineEntity tp = future.get();
-//            System.out.println("当前转移线路: " + tp.getLine()
-//                    + " 车牌号为: " + tp.getCph()
-//                    + " 当前转移线路路径规划结果距离为: " + tp.getPlannedDistance());
-            if(TransferType.UP_TRANFER.getTypeMsg().equals(tp.getType())){
-                int lc = resultMap.get(tp.getCph()).getSzylc() == null?0:resultMap.get(tp.getCph()).getSzylc();
-                double dw = resultMap.get(tp.getCph()).getSzydw() == null?0:resultMap.get(tp.getCph()).getSzydw();
-                resultMap.get(tp.getCph()).setSzylc(lc + tp.getPlannedDistance());
-                resultMap.get(tp.getCph()).setSzydw(dw + tp.getZydw());
-            } else {
-                int lc = resultMap.get(tp.getCph()).getXzylc() == null?0:resultMap.get(tp.getCph()).getXzylc();
-                double dw = resultMap.get(tp.getCph()).getXzydw() == null?0:resultMap.get(tp.getCph()).getXzydw();
-                resultMap.get(tp.getCph()).setXzylc(lc + tp.getPlannedDistance());
-                resultMap.get(tp.getCph()).setXzydw(dw + tp.getZydw());
+            /**
+             * 查看基础数据中是否有当前转移线路对应的车牌号:
+             * 1.如果有,继续处理;
+             * 2.如果没有,则丢且当前数据
+             */
+//            System.out.println("查看基础数据中是否有当前转移线路对应的车牌号" + resultMap.get(tp.getCph()) == null);
+            if(resultMap.get(tp.getCph()) != null){
+                if(TransferType.UP_TRANFER.getTypeMsg().equals(tp.getType())){
+                    int lc = resultMap.get(tp.getCph()).getSzylc() == null?0:resultMap.get(tp.getCph()).getSzylc();
+                    double dw = resultMap.get(tp.getCph()).getSzydw() == null?0:resultMap.get(tp.getCph()).getSzydw();
+                    resultMap.get(tp.getCph()).setSzylc(lc + tp.getPlannedDistance());
+                    resultMap.get(tp.getCph()).setSzydw(dw + tp.getZydw());
+                } else {
+                    int lc = resultMap.get(tp.getCph()).getXzylc() == null?0:resultMap.get(tp.getCph()).getXzylc();
+                    double dw = resultMap.get(tp.getCph()).getXzydw() == null?0:resultMap.get(tp.getCph()).getXzydw();
+                    resultMap.get(tp.getCph()).setXzylc(lc + tp.getPlannedDistance());
+                    resultMap.get(tp.getCph()).setXzydw(dw + tp.getZydw());
+                }
             }
         }
 
+        int length = deliverVehicleMap.size() + pickupVehicleMap.size();
+
         //4.6 提送货线路路径规划距离获取
-        for(GoodsPlanLineEntity goodsBill:goodsBillsList){
-            Future<GoodsPlanLineEntity> future = doRoutePlanningCompleteService.take();
-            GoodsPlanLineEntity gp = future.get();
-//            System.out.println("当前送货单为: " + gp.getGoodsBill()
-//                    + " 车牌号为: " + gp.getCph()
-//                    + " 编号类型: " + gp.getBillType());
-//            System.out.println("当前送货单路径规划结果距离为: " + gp);
+        for(int i = 0; i < length; i++){
+            Future<VehiclePlanLineEntity> future = doRoutePlanningCompleteService.take();
+            VehiclePlanLineEntity gp = future.get();
             if(BillType.DELIVER_GOODS.getTypeMsg().equals(gp.getBillType())){
                 int lc = resultMap.get(gp.getCph()).getPjghlc() == null?0:resultMap.get(gp.getCph()).getPjghlc();
                 resultMap.get(gp.getCph()).setPjghlc(lc + gp.getGoodsDistance());
-                int js = 0;
-                double dw = 0;
-                for(GoodsOrdersEntity order:gp.getOrderGeoCodeList()){
-                    js = js + order.getCountOfOrder();
-                    dw = dw + order.getTon();
-                }
-                resultMap.get(gp.getCph()).setPjjs(js);
-                resultMap.get(gp.getCph()).setPjdw(dw);
             } else {
                 int lc = resultMap.get(gp.getCph()).getQjghlc() == null?0:resultMap.get(gp.getCph()).getQjghlc();
                 resultMap.get(gp.getCph()).setQjghlc(lc + gp.getGoodsDistance());
-                int js = 0;
-                double dw = 0;
-                for(GoodsOrdersEntity order:gp.getOrderGeoCodeList()){
-                    js = js + order.getCountOfOrder();
-                    dw = dw + order.getTon();
-                }
-                resultMap.get(gp.getCph()).setQjjs(js);
-                resultMap.get(gp.getCph()).setQjdw(dw);
             }
         }
-
-//        for(SingleVehicleWorkDurationEntity entity : resultMap.values()){
-//            if(entity.getSzydw() != null || entity.getXzydw() != null
-//                    || entity.getPjdw() != null || entity.getQjdw() != null){
-//                System.out.println("统计计算结果如下\n" + entity);
-//            }
-//        }
 
         //5.将统计计算结果插入数据库中
         singleVehicleWorkDurationMapper.batchInsertSingleVehicleWorkDurationInfo(

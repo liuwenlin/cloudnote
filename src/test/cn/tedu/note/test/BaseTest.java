@@ -13,7 +13,8 @@ public abstract class BaseTest {
 		ctx = new ClassPathXmlApplicationContext(
 				"conf/spring-mvc.xml",
 				"conf/spring-mybatis.xml",
-				"conf/spring-service.xml");
+				"conf/spring-service.xml",
+				"log4j.xml");
 	}
 
 	@After

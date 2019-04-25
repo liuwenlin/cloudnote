@@ -1,5 +1,6 @@
 package cn.tedu.note.util;
 
+import cn.tedu.note.entity.GoodsPlanLineEntity;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.io.UnsupportedEncodingException;
@@ -7,6 +8,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -153,5 +155,18 @@ public class StringUtils {
         System.out.println(md5ByNative(resultString));
         System.out.println(md5BySpring(resultString));
         System.out.println(isZeroAfterRemaind(47,16));
+
+        GoodsPlanLineEntity entity = new GoodsPlanLineEntity();
+
+        entity.setCph("沪A88888");
+
+        List<GoodsPlanLineEntity> list = new LinkedList<GoodsPlanLineEntity>();
+
+        list.add(entity);
+        System.out.println(entity);
+
+        entity.setCph("沪666666");
+        System.out.println(entity);
+
     }
 }

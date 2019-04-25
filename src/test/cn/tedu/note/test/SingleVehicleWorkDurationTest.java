@@ -4,8 +4,11 @@ import cn.tedu.note.dao.SingleVehicleWorkDurationMapper;
 import cn.tedu.note.entity.GoodsPlanLineEntity;
 import cn.tedu.note.entity.SingleVehicleWorkDurationEntity;
 import cn.tedu.note.entity.TransferPlanLineEntity;
+import cn.tedu.note.entity.VehiclePlanLineEntity;
+import cn.tedu.note.service.IAmapService;
 import cn.tedu.note.service.impl.AmapService;
 import cn.tedu.note.service.impl.SingleVehicleWorkDurationService;
+import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,11 +23,13 @@ import java.util.concurrent.ExecutionException;
  */
 public class SingleVehicleWorkDurationTest extends BaseTest {
 
+    private static Logger LOG = Logger.getLogger(SingleVehicleWorkDurationTest.class);
+
     SingleVehicleWorkDurationMapper dao;
 
     SingleVehicleWorkDurationService singleVehicleWorkDurationService;
 
-    AmapService amapService;
+    IAmapService amapService;
 
     @Before
     public void init(){
@@ -34,11 +39,17 @@ public class SingleVehicleWorkDurationTest extends BaseTest {
     }
 
     @Test
-    public void testSingleVehicleWorkDurationMapper(){
-        List<Map<String,Object>> list = dao.getSingleVehicleWorkDurationMap();
-        for(Map<String,Object> map : list){
-            System.out.println(map);
+    public void testSingleVehicleWorkDurationMap(){
+        Map<String,SingleVehicleWorkDurationEntity> list = dao.getSingleVehicleWorkDurationMap();
+        for(Object entity : list.values()){
+            System.out.println(entity);
         }
+    }
+
+
+    @Test
+    public void testSingleVehicleWorkDurationList(){
+
     }
 
     @Test
@@ -68,6 +79,31 @@ public class SingleVehicleWorkDurationTest extends BaseTest {
     @Test
     public void testSingleVehicleWorkDurationStatisticInfo() throws ExecutionException, InterruptedException {
         singleVehicleWorkDurationService.computeSingleVehicleWorkDuration();
+    }
+
+    @Test
+    public void testDeliverGoodsPlanMap(){
+        LOG.info("---测试开始---");
+        Map<String,VehiclePlanLineEntity> list = dao.getDeliverGoodsPlanLineMap();
+        for(VehiclePlanLineEntity entity : list.values()){
+            System.out.println(entity);
+        }
+        LOG.info("---测试结束---");
+    }
+
+    @Test
+    public void testPickupGoodsPlanMap(){
+        LOG.info("---测试开始---");
+        Map<String,VehiclePlanLineEntity> list = dao.getPickupGoodsPlanLineMap();
+
+        for(String cph : list.keySet()){
+            System.out.println("车牌号: " + cph + " "+ list.get(cph));
+        }
+
+//        for(VehiclePlanLineEntity entity : list.values()){
+//            System.out.println(entity);
+//        }
+        LOG.info("---测试结束---");
     }
 
 }

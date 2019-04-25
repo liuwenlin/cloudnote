@@ -2,6 +2,7 @@ package cn.tedu.note.service;
 
 import cn.tedu.note.entity.GoodsPlanLineEntity;
 import cn.tedu.note.entity.TransferPlanLineEntity;
+import cn.tedu.note.entity.VehiclePlanLineEntity;
 
 import java.util.concurrent.ExecutionException;
 
@@ -12,9 +13,9 @@ import java.util.concurrent.ExecutionException;
  */
 public interface IAmapService {
 
-    GoodsPlanLineEntity captureGeocoding(GoodsPlanLineEntity goodsPlanLine) throws InterruptedException, ExecutionException;
+    VehiclePlanLineEntity captureGeocoding(VehiclePlanLineEntity vehiclePlanLineEntity) throws InterruptedException, ExecutionException;
 
-    GoodsPlanLineEntity captureRoutePlanning(GoodsPlanLineEntity goodsPlanLine) throws InterruptedException, ExecutionException;
+    VehiclePlanLineEntity captureRoutePlanning(String startGeocode, VehiclePlanLineEntity vehiclePlanLineEntity) throws InterruptedException, ExecutionException;
 
     TransferPlanLineEntity captureTransferGeocoding(TransferPlanLineEntity transferPlanLineEntity) throws InterruptedException, ExecutionException;
 

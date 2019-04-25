@@ -7,12 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9568f10c-6531-427a-a5b5-e49d8ef99e47" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/VehicleOrderEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/VehiclePlanLineEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.dtd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/SingleVehicleWorkDurationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/SingleVehicleWorkDurationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/TransferPlanLineEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/TransferPlanLineEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/IAmapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/IAmapService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/AmapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/AmapService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/StringUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SingleVehicleWorkDurationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SingleVehicleWorkDurationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/tedu/note/test/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/tedu/note/test/BaseTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,57 +54,61 @@
     <session id="-758561157">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="30" />
+          <entry key="project.closed" value="41" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.23" value="2" />
-          <entry key="project.open.time.24" value="2" />
+          <entry key="project.open.time.24" value="3" />
           <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.27" value="2" />
+          <entry key="project.open.time.27" value="4" />
           <entry key="project.open.time.28" value="3" />
-          <entry key="project.open.time.29" value="4" />
+          <entry key="project.open.time.29" value="5" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.34" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="33" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="21" />
+          <entry key="class" value="27" />
           <entry key="css" value="17" />
+          <entry key="dtd" value="6" />
           <entry key="html" value="21" />
           <entry key="ico" value="3" />
-          <entry key="java" value="211" />
+          <entry key="java" value="275" />
           <entry key="js" value="18" />
           <entry key="jsp" value="4" />
           <entry key="png" value="4" />
-          <entry key="properties" value="9" />
+          <entry key="properties" value="10" />
           <entry key="sql" value="5" />
           <entry key="ts" value="4" />
-          <entry key="xml" value="53" />
+          <entry key="xml" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="21" />
+          <entry key="CLASS" value="27" />
           <entry key="CSS" value="17" />
+          <entry key="DTD" value="6" />
           <entry key="HTML" value="21" />
           <entry key="Image" value="7" />
-          <entry key="JAVA" value="211" />
+          <entry key="JAVA" value="275" />
           <entry key="JSP" value="4" />
           <entry key="JavaScript" value="18" />
-          <entry key="Properties" value="9" />
+          <entry key="Properties" value="10" />
           <entry key="Scratch" value="5" />
           <entry key="TypeScript" value="4" />
-          <entry key="XML" value="53" />
+          <entry key="XML" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -99,26 +116,26 @@
           <entry key="css" value="361" />
           <entry key="ft" value="48" />
           <entry key="html" value="1190" />
-          <entry key="java" value="5959" />
+          <entry key="java" value="8084" />
           <entry key="js" value="361" />
-          <entry key="properties" value="45" />
+          <entry key="properties" value="49" />
           <entry key="sql" value="33" />
           <entry key="txt" value="36" />
-          <entry key="xml" value="813" />
+          <entry key="xml" value="1377" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="361" />
           <entry key="HTML" value="1190" />
-          <entry key="JAVA" value="5959" />
+          <entry key="JAVA" value="8084" />
           <entry key="JavaScript" value="361" />
           <entry key="PLAIN_TEXT" value="36" />
-          <entry key="Properties" value="45" />
-          <entry key="SQL" value="45" />
+          <entry key="Properties" value="49" />
+          <entry key="SQL" value="74" />
           <entry key="Scratch" value="33" />
           <entry key="VTL" value="48" />
-          <entry key="XML" value="768" />
+          <entry key="XML" value="1303" />
         </counts>
       </usages-collector>
     </session>
@@ -128,23 +145,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="178" column="79" selection-start-line="178" selection-start-column="79" selection-end-line="178" selection-end-column="79" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="34">
+              <caret line="83" column="9" lean-forward="true" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,6 +165,7 @@
         <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -205,12 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKAsyncDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKChildrenAsyncDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKChildrenDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKDataDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZkGetChildrenDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKOperateDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dongnao/demo/zk/ZKSessionDemo.java" />
         <option value="$PROJECT_DIR$/../zookeeper_study/pom.xml" />
@@ -230,12 +230,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/edit.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/mail_config.html" />
         <option value="$PROJECT_DIR$/src/main/resources/conf/jdbc_oracle.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/TransferPlanLineEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/GoodsOrdersEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/GoodsPlanLineEntity.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/ISingleVehicleWorkDurationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/IAmapService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/Constant/SystemConsts.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/Constant/AmapApiConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/Constant/BillType.java" />
@@ -246,16 +244,24 @@
         <option value="$PROJECT_DIR$/src/main/resources/conf/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/NoteServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/SingleVehicleWorkDurationEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/TestMapApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/HttpUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" />
-        <option value="$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/StringUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/AmapService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/conf/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/conf/log4j.xml" />
+        <option value="$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/TransferPlanLineEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/SingleVehicleWorkDurationEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/IAmapService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/VehiclePlanLineEntity.java" />
+        <option value="$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/VehicleOrderEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/AmapService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" />
       </list>
     </option>
   </component>
@@ -444,17 +450,13 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -462,10 +464,10 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555762073689" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556192364710" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hyreport/hoaureport/hoaureport" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zookeeper_study" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -474,12 +476,9 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Develop workspace\idea\cloudnote\src\main\java\cn\tedu\note\entity" />
-      <recent name="D:\Develop workspace\idea\cloudnote\src\main\resources\mapper" />
-      <recent name="D:\Develop workspace\idea\cloudnote\src\main\resources\conf" />
-      <recent name="D:\Develop workspace\idea\cloudnote\src\main\webapp\styles" />
-      <recent name="D:\Develop workspace\idea\cloudnote\src\main\java\cn\tedu\note" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Develop workspace\idea\cloudnote\src\main\resources" />
+      <recent name="D:\Develop workspace\idea\cloudnote\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.tedu.note.constant" />
@@ -488,8 +487,12 @@
       <recent name="cn.tedu.note.service.impl" />
       <recent name="cn.tedu.note.service" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Develop workspace\idea\cloudnote\src\main\webapp" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Develop workspace\idea\cloudnote\src\main\resources\conf" />
+      <recent name="D:\Develop workspace\idea\cloudnote\src\main\java\cn\tedu\note\entity" />
+      <recent name="D:\Develop workspace\idea\cloudnote\src\main\resources\mapper" />
+      <recent name="D:\Develop workspace\idea\cloudnote\src\main\webapp\styles" />
+      <recent name="D:\Develop workspace\idea\cloudnote\src\main\java\cn\tedu\note" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -505,20 +508,7 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo">
-    <configuration name="StringUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.util.StringUtils" />
-      <module name="cloudnote" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.tedu.note.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SingleVehicleWorkDurationTest.testGetGoodsPlanLineList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloudnote" />
       <extension name="coverage">
         <pattern>
@@ -528,23 +518,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
       <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.SingleVehicleWorkDurationTest" />
-      <option name="METHOD_NAME" value="testGetGoodsPlanLineList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SingleVehicleWorkDurationTest.testGetSingleVehicleWorkDurationList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cloudnote" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.tedu.note.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.SingleVehicleWorkDurationTest" />
-      <option name="METHOD_NAME" value="testGetSingleVehicleWorkDurationList" />
+      <option name="METHOD_NAME" value="testDeliverGoodsPlanMap" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -561,6 +535,38 @@
       <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
       <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.SingleVehicleWorkDurationTest" />
       <option name="METHOD_NAME" value="testGetTransferPlanLineList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleVehicleWorkDurationTest.testPickupGoodsPlanMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloudnote" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.tedu.note.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.SingleVehicleWorkDurationTest" />
+      <option name="METHOD_NAME" value="testPickupGoodsPlanMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloudnote" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.tedu.note.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.SingleVehicleWorkDurationTest" />
+      <option name="METHOD_NAME" value="testSingleVehicleWorkDurationMap" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -656,19 +662,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.cloudnote_server" />
-      <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGetTransferPlanLineList" />
-      <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGetGoodsPlanLineList" />
-      <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGetSingleVehicleWorkDurationList" />
+      <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" />
+      <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testPickupGoodsPlanMap" />
+      <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationMap" />
       <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" />
-      <item itemvalue="Application.StringUtils" />
+      <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGetTransferPlanLineList" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" />
-        <item itemvalue="Application.StringUtils" />
-        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGetGoodsPlanLineList" />
+        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testPickupGoodsPlanMap" />
         <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGetTransferPlanLineList" />
-        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGetSingleVehicleWorkDurationList" />
+        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" />
+        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationMap" />
       </list>
     </recent_temporary>
   </component>
@@ -715,43 +721,54 @@
       <workItem from="1555594059538" duration="7022000" />
       <workItem from="1555636177450" duration="27142000" />
       <workItem from="1555756096018" duration="6023000" />
+      <workItem from="1555835295485" duration="361000" />
+      <workItem from="1555895742023" duration="2165000" />
+      <workItem from="1555908025116" duration="1069000" />
+      <workItem from="1555918807999" duration="1045000" />
+      <workItem from="1555924821979" duration="4774000" />
+      <workItem from="1555980387357" duration="6233000" />
+      <workItem from="1556002923055" duration="2044000" />
+      <workItem from="1556006207508" duration="10343000" />
+      <workItem from="1556067305872" duration="6030000" />
+      <workItem from="1556092988997" duration="5566000" />
+      <workItem from="1556164616841" duration="20404000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.19 at 15h 07m 18s.xml">
+    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.25 at 18h 44m 45s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.19 at 15h 28m 33s.xml">
+    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.25 at 18h 48m 04s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.19 at 15h 35m 19s.xml">
+    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.25 at 18h 54m 40s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.19 at 15h 41m 08s.xml">
+    <history-entry file="SingleVehicleWorkDurationTest_testGetTransferPlanLineList - 2019.04.25 at 18h 57m 49s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testGetTransferPlanLineList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.25 at 19h 09m 49s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.20 at 18h 34m 27s.xml">
+    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.25 at 19h 11m 03s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.20 at 18h 40m 19s.xml">
+    <history-entry file="SingleVehicleWorkDurationTest_testPickupGoodsPlanMap - 2019.04.25 at 19h 27m 17s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testPickupGoodsPlanMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.25 at 19h 34m 25s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.20 at 19h 00m 11s.xml">
+    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.25 at 19h 35m 40s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.20 at 19h 36m 19s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.20 at 19h 45m 45s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.20 at 19h 49m 56s.xml">
+    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.04.25 at 19h 37m 36s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170952000" />
+    <option name="totallyTimeSpent" value="230986000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -764,9 +781,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.21715818" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.23190348" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -775,17 +791,17 @@
       <window_info id="Favorites" order="6" sideWeight="0.501006" side_tool="true" weight="0.2272118" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.22836879" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.49361703" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.33333334" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.41985816" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.29078013" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44822696" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.19148937" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49932975" weight="0.2680851" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.40567377" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.35602838" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.2680851" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.29787233" />
       <window_info anchor="bottom" id="Spring" order="12" weight="0.32907802" />
       <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.5347518" />
@@ -853,111 +869,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="299" column="7" lean-forward="true" selection-start-line="299" selection-start-column="7" selection-end-line="299" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar!/org/apache/http/util/EntityUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="143" column="27" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.jar!/com/fasterxml/jackson/databind/JsonNode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="262" column="29" selection-start-line="262" selection-start-column="29" selection-end-line="262" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="750" column="48" selection-start-line="750" selection-start-column="48" selection-end-line="750" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/Note.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/Notebook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/Stars.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-447">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PostMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/PostDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/NotebookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/jdbc_oracle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/conf/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -999,31 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/IAmapService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding>
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="122" column="16" lean-forward="true" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1052,13 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.9.RELEASE/spring-beans-4.2.9.RELEASE.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -1066,51 +945,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/net/URI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="736" column="11" selection-start-line="736" selection-start-column="11" selection-end-line="736" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/TestMapApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/GoodsOrdersEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
-            <element signature="e#1585#1586#0" expanded="true" />
-            <element signature="e#1631#1632#0" expanded="true" />
-            <element signature="e#1669#1670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/HttpUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1128,49 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="213" column="31" selection-start-line="213" selection-start-column="31" selection-end-line="213" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/constant/AmapApiConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="139" column="4" selection-start-line="139" selection-start-column="4" selection-end-line="145" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/GoodsPlanLineEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="914">
-          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1647#1648#0" expanded="true" />
-            <element signature="e#1678#1679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/constant/BillType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1178,152 +973,405 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/AmapService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2011">
-          <caret line="190" column="58" lean-forward="true" selection-start-line="190" selection-start-column="58" selection-end-line="190" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3630">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding>
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="e#7570#7574#0" expanded="true" />
-            <element signature="n#resultMap#2;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/constant/TransferType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#582#583#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/HttpUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/concurrent/Callable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/TestMapApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="155" column="54" selection-start-line="155" selection-start-column="54" selection-end-line="155" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/log4j.properties" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="180" column="17" lean-forward="true" selection-start-line="180" selection-start-column="17" selection-end-line="180" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/varia/LevelRangeFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/ConsoleAppender.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/RollingFileAppender.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/DailyRollingFileAppender.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/log4j.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/activemq/activemq-all/5.8.0/activemq-all-5.8.0.jar!/org/apache/log4j/xml/log4j.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/GoodsOrdersEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="44" column="34" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="44" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/GoodsPlanLineEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/TransferPlanLineEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="33">
+          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1634#1635#0" expanded="true" />
-            <element signature="e#3057#3058#0" expanded="true" />
-            <element signature="e#3084#3085#0" expanded="true" />
-            <element signature="e#3187#3188#0" expanded="true" />
-            <element signature="e#3214#3215#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <element signature="e#1729#1730#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/SingleVehicleWorkDurationEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="216" selection-start-line="216" selection-end-line="216" />
+        <state relative-caret-position="1495">
+          <caret line="359" column="18" selection-start-line="359" selection-start-column="18" selection-end-line="359" selection-end-column="18" />
+          <folding>
+            <element signature="e#2336#2337#0" expanded="true" />
+            <element signature="e#2361#2362#0" expanded="true" />
+            <element signature="e#2397#2398#0" expanded="true" />
+            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2455#2456#0" expanded="true" />
+            <element signature="e#2481#2482#0" expanded="true" />
+            <element signature="e#2519#2520#0" expanded="true" />
+            <element signature="e#2549#2550#0" expanded="true" />
+            <element signature="e#2578#2579#0" expanded="true" />
+            <element signature="e#2603#2604#0" expanded="true" />
+            <element signature="e#2639#2640#0" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <element signature="e#2700#2701#0" expanded="true" />
+            <element signature="e#2729#2730#0" expanded="true" />
+            <element signature="e#2773#2774#0" expanded="true" />
+            <element signature="e#2809#2810#0" expanded="true" />
+            <element signature="e#2839#2840#0" expanded="true" />
+            <element signature="e#2865#2866#0" expanded="true" />
+            <element signature="e#2903#2904#0" expanded="true" />
+            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2962#2963#0" expanded="true" />
+            <element signature="e#2987#2988#0" expanded="true" />
+            <element signature="e#3023#3024#0" expanded="true" />
+            <element signature="e#3051#3052#0" expanded="true" />
+            <element signature="e#3084#3085#0" expanded="true" />
+            <element signature="e#3112#3113#0" expanded="true" />
+            <element signature="e#3155#3156#0" expanded="true" />
+            <element signature="e#3189#3190#0" expanded="true" />
+            <element signature="e#3222#3223#0" expanded="true" />
+            <element signature="e#3250#3251#0" expanded="true" />
+            <element signature="e#3293#3294#0" expanded="true" />
+            <element signature="e#3327#3328#0" expanded="true" />
+            <element signature="e#3361#3362#0" expanded="true" />
+            <element signature="e#3390#3391#0" expanded="true" />
+            <element signature="e#3435#3436#0" expanded="true" />
+            <element signature="e#3471#3472#0" expanded="true" />
+            <element signature="e#3505#3506#0" expanded="true" />
+            <element signature="e#3534#3535#0" expanded="true" />
+            <element signature="e#3579#3580#0" expanded="true" />
+            <element signature="e#3615#3616#0" expanded="true" />
+            <element signature="e#3647#3648#0" expanded="true" />
+            <element signature="e#3675#3676#0" expanded="true" />
+            <element signature="e#3717#3718#0" expanded="true" />
+            <element signature="e#3751#3752#0" expanded="true" />
+            <element signature="e#3783#3784#0" expanded="true" />
+            <element signature="e#3811#3812#0" expanded="true" />
+            <element signature="e#3853#3854#0" expanded="true" />
+            <element signature="e#3887#3888#0" expanded="true" />
+            <element signature="e#3918#3919#0" expanded="true" />
+            <element signature="e#3945#3946#0" expanded="true" />
+            <element signature="e#3985#3986#0" expanded="true" />
+            <element signature="e#4017#4018#0" expanded="true" />
+            <element signature="e#4048#4049#0" expanded="true" />
+            <element signature="e#4075#4076#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4147#4148#0" expanded="true" />
+            <element signature="e#4178#4179#0" expanded="true" />
+            <element signature="e#4205#4206#0" expanded="true" />
+            <element signature="e#4245#4246#0" expanded="true" />
+            <element signature="e#4277#4278#0" expanded="true" />
+            <element signature="e#4308#4309#0" expanded="true" />
+            <element signature="e#4335#4336#0" expanded="true" />
+            <element signature="e#4375#4376#0" expanded="true" />
+            <element signature="e#4407#4408#0" expanded="true" />
+            <element signature="e#4439#4440#0" expanded="true" />
+            <element signature="e#4466#4467#0" expanded="true" />
+            <element signature="e#4507#4508#0" expanded="true" />
+            <element signature="e#4539#4540#0" expanded="true" />
+            <element signature="e#4571#4572#0" expanded="true" />
+            <element signature="e#4598#4599#0" expanded="true" />
+            <element signature="e#4639#4640#0" expanded="true" />
+            <element signature="e#4671#4672#0" expanded="true" />
+            <element signature="e#4700#4701#0" expanded="true" />
+            <element signature="e#4727#4728#0" expanded="true" />
+            <element signature="e#4765#4766#0" expanded="true" />
+            <element signature="e#4797#4798#0" expanded="true" />
+            <element signature="e#4833#4834#0" expanded="true" />
+            <element signature="e#4867#4868#0" expanded="true" />
+            <element signature="e#4919#4920#0" expanded="true" />
+            <element signature="e#4965#4966#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/aop/TimeAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="114" column="50" selection-start-line="114" selection-start-column="50" selection-end-line="114" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/IAmapService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/RunAfters.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/VehiclePlanLineEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2149#2150#0" expanded="true" />
-            <element signature="e#2174#2175#0" expanded="true" />
-            <element signature="e#2210#2211#0" expanded="true" />
-            <element signature="e#2238#2239#0" expanded="true" />
-            <element signature="e#2268#2269#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
-            <element signature="e#2332#2333#0" expanded="true" />
-            <element signature="e#2362#2363#0" expanded="true" />
-            <element signature="e#2391#2392#0" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2452#2453#0" expanded="true" />
-            <element signature="e#2480#2481#0" expanded="true" />
-            <element signature="e#2513#2514#0" expanded="true" />
-            <element signature="e#2542#2543#0" expanded="true" />
-            <element signature="e#2586#2587#0" expanded="true" />
-            <element signature="e#2622#2623#0" expanded="true" />
-            <element signature="e#2652#2653#0" expanded="true" />
-            <element signature="e#2678#2679#0" expanded="true" />
-            <element signature="e#2716#2717#0" expanded="true" />
-            <element signature="e#2746#2747#0" expanded="true" />
-            <element signature="e#2775#2776#0" expanded="true" />
-            <element signature="e#2800#2801#0" expanded="true" />
-            <element signature="e#2836#2837#0" expanded="true" />
-            <element signature="e#2864#2865#0" expanded="true" />
-            <element signature="e#2897#2898#0" expanded="true" />
-            <element signature="e#2925#2926#0" expanded="true" />
-            <element signature="e#2968#2969#0" expanded="true" />
-            <element signature="e#3002#3003#0" expanded="true" />
-            <element signature="e#3035#3036#0" expanded="true" />
-            <element signature="e#3063#3064#0" expanded="true" />
-            <element signature="e#3106#3107#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
-            <element signature="e#3174#3175#0" expanded="true" />
-            <element signature="e#3203#3204#0" expanded="true" />
-            <element signature="e#3248#3249#0" expanded="true" />
-            <element signature="e#3284#3285#0" expanded="true" />
-            <element signature="e#3318#3319#0" expanded="true" />
-            <element signature="e#3347#3348#0" expanded="true" />
-            <element signature="e#3392#3393#0" expanded="true" />
-            <element signature="e#3428#3429#0" expanded="true" />
-            <element signature="e#3460#3461#0" expanded="true" />
-            <element signature="e#3488#3489#0" expanded="true" />
-            <element signature="e#3530#3531#0" expanded="true" />
-            <element signature="e#3564#3565#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3666#3667#0" expanded="true" />
-            <element signature="e#3700#3701#0" expanded="true" />
-            <element signature="e#3731#3732#0" expanded="true" />
-            <element signature="e#3758#3759#0" expanded="true" />
-            <element signature="e#3798#3799#0" expanded="true" />
-            <element signature="e#3830#3831#0" expanded="true" />
-            <element signature="e#3861#3862#0" expanded="true" />
-            <element signature="e#3888#3889#0" expanded="true" />
-            <element signature="e#3928#3929#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-            <element signature="e#3992#3993#0" expanded="true" />
-            <element signature="e#4019#4020#0" expanded="true" />
-            <element signature="e#4060#4061#0" expanded="true" />
-            <element signature="e#4092#4093#0" expanded="true" />
-            <element signature="e#4124#4125#0" expanded="true" />
-            <element signature="e#4151#4152#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4224#4225#0" expanded="true" />
-            <element signature="e#4253#4254#0" expanded="true" />
-            <element signature="e#4280#4281#0" expanded="true" />
-            <element signature="e#4318#4319#0" expanded="true" />
-            <element signature="e#4350#4351#0" expanded="true" />
-            <element signature="e#4386#4387#0" expanded="true" />
-            <element signature="e#4420#4421#0" expanded="true" />
-            <element signature="e#4472#4473#0" expanded="true" />
-            <element signature="e#4518#4519#0" expanded="true" />
+            <element signature="e#1336#1337#0" expanded="true" />
+            <element signature="e#1374#1375#0" expanded="true" />
+            <element signature="e#1404#1405#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1470#1471#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+            <element signature="e#1558#1559#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#1656#1657#0" expanded="true" />
+            <element signature="e#1688#1689#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+            <element signature="e#1762#1763#0" expanded="true" />
+            <element signature="e#1818#1819#0" expanded="true" />
+            <element signature="e#1866#1867#0" expanded="true" />
+            <element signature="e#1905#1906#0" expanded="true" />
+            <element signature="e#1940#1941#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+            <element signature="e#2105#2106#0" expanded="true" />
+            <element signature="e#2144#2145#0" expanded="true" />
+            <element signature="e#2323#2324#0" expanded="true" />
+            <element signature="e#2359#2360#0" expanded="true" />
+            <element signature="e#2418#2419#0" expanded="true" />
+            <element signature="e#2468#2469#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="178" column="79" selection-start-line="178" selection-start-column="79" selection-end-line="178" selection-end-column="79" />
+        <state relative-caret-position="-689">
+          <caret line="437" column="13" lean-forward="true" selection-start-line="437" selection-start-column="13" selection-end-line="437" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/VehicleOrderEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="182" column="18" selection-start-line="182" selection-start-column="18" selection-end-line="182" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1426#1427#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+            <element signature="e#1556#1557#0" expanded="true" />
+            <element signature="e#1587#1588#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1654#1655#0" expanded="true" />
+            <element signature="e#1686#1687#0" expanded="true" />
+            <element signature="e#1720#1721#0" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1796#1797#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#1898#1899#0" expanded="true" />
+            <element signature="e#1944#1945#0" expanded="true" />
+            <element signature="e#1982#1983#0" expanded="true" />
+            <element signature="e#2022#2023#0" expanded="true" />
+            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2162#2163#0" expanded="true" />
+            <element signature="e#2192#2193#0" expanded="true" />
+            <element signature="e#2218#2219#0" expanded="true" />
+            <element signature="e#2256#2257#0" expanded="true" />
+            <element signature="e#2286#2287#0" expanded="true" />
+            <element signature="e#2315#2316#0" expanded="true" />
+            <element signature="e#2340#2341#0" expanded="true" />
+            <element signature="e#2376#2377#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2481#2482#0" expanded="true" />
+            <element signature="e#2540#2541#0" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/constant/AmapApiConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/AmapService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="147" column="58" selection-start-line="147" selection-start-column="58" selection-end-line="147" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="114" column="20" lean-forward="true" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+          <folding>
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="e#871#875#0" expanded="true" />
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#3;n#mapper#0;n#!!top" />
+            <element signature="n#select#5;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#4;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="34">
+          <caret line="83" column="9" lean-forward="true" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
