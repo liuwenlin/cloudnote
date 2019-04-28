@@ -248,7 +248,7 @@ public class AmapService implements IAmapService {
     }
 
     /**
-     * 与运算取余数,参数b必须为2的整数倍
+     * 与运算取余数,参数b必须为2的幂次数
      * @param a
      * @param b
      * @return

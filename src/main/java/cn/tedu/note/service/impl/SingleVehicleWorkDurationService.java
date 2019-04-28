@@ -405,20 +405,23 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
             /**
              * 查看基础数据中是否有当前转移线路对应的车牌号:
              * 1.如果有,继续处理;
-             * 2.如果没有,则丢且当前数据
+             * 2.如果没有,则忽略当前步骤
              */
-//            System.out.println("查看基础数据中是否有当前转移线路对应的车牌号" + resultMap.get(tp.getCph()) == null);
             if(resultMap.get(tp.getCph()) != null){
                 if(TransferType.UP_TRANFER.getTypeMsg().equals(tp.getType())){
                     int lc = resultMap.get(tp.getCph()).getSzylc() == null?0:resultMap.get(tp.getCph()).getSzylc();
                     double dw = resultMap.get(tp.getCph()).getSzydw() == null?0:resultMap.get(tp.getCph()).getSzydw();
+                    double tj = resultMap.get(tp.getCph()).getSzytj() == null?0:resultMap.get(tp.getCph()).getSzytj();
                     resultMap.get(tp.getCph()).setSzylc(lc + tp.getPlannedDistance());
                     resultMap.get(tp.getCph()).setSzydw(dw + tp.getZydw());
+                    resultMap.get(tp.getCph()).setSzytj(tj + tp.getZytj());
                 } else {
                     int lc = resultMap.get(tp.getCph()).getXzylc() == null?0:resultMap.get(tp.getCph()).getXzylc();
                     double dw = resultMap.get(tp.getCph()).getXzydw() == null?0:resultMap.get(tp.getCph()).getXzydw();
+                    double tj = resultMap.get(tp.getCph()).getXzytj() == null?0:resultMap.get(tp.getCph()).getXzytj();
                     resultMap.get(tp.getCph()).setXzylc(lc + tp.getPlannedDistance());
                     resultMap.get(tp.getCph()).setXzydw(dw + tp.getZydw());
+                    resultMap.get(tp.getCph()).setXzytj(tj + tp.getZytj());
                 }
             }
         }
@@ -429,12 +432,19 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
         for(int i = 0; i < length; i++){
             Future<VehiclePlanLineEntity> future = doRoutePlanningCompleteService.take();
             VehiclePlanLineEntity gp = future.get();
-            if(BillType.DELIVER_GOODS.getTypeMsg().equals(gp.getBillType())){
-                int lc = resultMap.get(gp.getCph()).getPjghlc() == null?0:resultMap.get(gp.getCph()).getPjghlc();
-                resultMap.get(gp.getCph()).setPjghlc(lc + gp.getGoodsDistance());
-            } else {
-                int lc = resultMap.get(gp.getCph()).getQjghlc() == null?0:resultMap.get(gp.getCph()).getQjghlc();
-                resultMap.get(gp.getCph()).setQjghlc(lc + gp.getGoodsDistance());
+            /**
+             * 查看基础数据中是否有当前转移线路对应的车牌号:
+             * 1.如果有,继续处理;
+             * 2.如果没有,则忽略当前步骤
+             */
+            if(resultMap.get(gp.getCph()) != null){
+                if(BillType.DELIVER_GOODS.getTypeMsg().equals(gp.getBillType())){
+                    int lc = resultMap.get(gp.getCph()).getPjghlc() == null?0:resultMap.get(gp.getCph()).getPjghlc();
+                    resultMap.get(gp.getCph()).setPjghlc(lc + gp.getGoodsDistance());
+                } else {
+                    int lc = resultMap.get(gp.getCph()).getQjghlc() == null?0:resultMap.get(gp.getCph()).getQjghlc();
+                    resultMap.get(gp.getCph()).setQjghlc(lc + gp.getGoodsDistance());
+                }
             }
         }
 

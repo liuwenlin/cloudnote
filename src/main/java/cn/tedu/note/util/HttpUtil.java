@@ -3,6 +3,9 @@ package cn.tedu.note.util;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -32,6 +35,11 @@ public class HttpUtil {
         URL url = new URL(urlstr); //避免有Java内部无法识别的字符,先将其转化为url,然后再请求.
         HttpGet get
                 = new HttpGet(new URI(url.getProtocol(), url.getHost(), url.getPath(), url.getQuery(), null));
+        RequestConfig config = RequestConfig.custom() //4.5版本httpclient连接超时参数设置方式.
+                .setConnectTimeout(5000)
+                .setConnectionRequestTimeout(2000)
+                .setSocketTimeout(5000).build();
+        get.setConfig(config);
         HttpResponse response;
         try {
             response = client.execute(get);

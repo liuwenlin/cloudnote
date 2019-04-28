@@ -73,6 +73,16 @@ public class SingleVehicleWorkDurationEntity {
     private Double szydw;
 
     /**
+     * 下转移体积
+     */
+    private Double xzytj;
+
+    /**
+     * 上转移体积
+     */
+    private Double szytj;
+
+    /**
      * 取件吨位
      */
     private Double qjdw;
@@ -115,7 +125,7 @@ public class SingleVehicleWorkDurationEntity {
 
     public SingleVehicleWorkDurationEntity(){}
 
-    public SingleVehicleWorkDurationEntity(String id, String syb, String dq, String sfdrdc, String cph, String cx, Integer szylc, Integer xzylc, Integer qjghlc, Integer pjghlc, Double xzydw, Double szydw, Double qjdw, Double pjdw, Double qjtj, Double pjtj, Integer qjjs, Integer pjjs, Date tjrq, Date record_date) {
+    public SingleVehicleWorkDurationEntity(String id, String syb, String dq, String sfdrdc, String cph, String cx, Integer szylc, Integer xzylc, Integer qjghlc, Integer pjghlc, Double xzydw, Double szydw, Double xzytj, Double szytj, Double qjdw, Double pjdw, Double qjtj, Double pjtj, Integer qjjs, Integer pjjs, Date tjrq, Date record_date) {
         this.id = id;
         this.syb = syb;
         this.dq = dq;
@@ -128,6 +138,8 @@ public class SingleVehicleWorkDurationEntity {
         this.pjghlc = pjghlc;
         this.xzydw = xzydw;
         this.szydw = szydw;
+        this.xzytj = xzytj;
+        this.szytj = szytj;
         this.qjdw = qjdw;
         this.pjdw = pjdw;
         this.qjtj = qjtj;
@@ -234,6 +246,22 @@ public class SingleVehicleWorkDurationEntity {
         this.szydw = szydw;
     }
 
+    public Double getXzytj() {
+        return xzytj;
+    }
+
+    public void setXzytj(Double xzytj) {
+        this.xzytj = xzytj;
+    }
+
+    public Double getSzytj() {
+        return szytj;
+    }
+
+    public void setSzytj(Double szytj) {
+        this.szytj = szytj;
+    }
+
     public Double getQjdw() {
         return qjdw;
     }
@@ -319,6 +347,8 @@ public class SingleVehicleWorkDurationEntity {
                 .append(getPjghlc(), entity.getPjghlc())
                 .append(getXzydw(), entity.getXzydw())
                 .append(getSzydw(), entity.getSzydw())
+                .append(getXzytj(), entity.getXzytj())
+                .append(getSzytj(), entity.getSzytj())
                 .append(getQjdw(), entity.getQjdw())
                 .append(getPjdw(), entity.getPjdw())
                 .append(getQjtj(), entity.getQjtj())
@@ -345,6 +375,8 @@ public class SingleVehicleWorkDurationEntity {
                 .append(getPjghlc())
                 .append(getXzydw())
                 .append(getSzydw())
+                .append(getXzytj())
+                .append(getSzytj())
                 .append(getQjdw())
                 .append(getPjdw())
                 .append(getQjtj())
@@ -371,6 +403,8 @@ public class SingleVehicleWorkDurationEntity {
                 ", pjghlc=" + pjghlc +
                 ", xzydw=" + xzydw +
                 ", szydw=" + szydw +
+                ", xzytj=" + xzytj +
+                ", szytj=" + szytj +
                 ", qjdw=" + qjdw +
                 ", pjdw=" + pjdw +
                 ", qjtj=" + qjtj +

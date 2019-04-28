@@ -106,6 +106,8 @@
             SW.PJGHLC,
             SW.XZYDW,
             SW.SZYDW,
+            SW.XZYTJ,
+            SW.SZYTJ,
             SW.QJDW,
             SW.PJDW,
             SW.QJJS,
@@ -130,6 +132,8 @@
 			#{item.pjghlc,jdbcType=INTEGER} PJGHLC,
 			#{item.xzydw,jdbcType=DOUBLE} XZYDW,
 			#{item.szydw,jdbcType=DOUBLE} SZYDW,
+            #{item.xzytj,jdbcType=DOUBLE} XZYTJ,
+            #{item.szytj,jdbcType=DOUBLE} SZYTJ,
 			#{item.qjdw,jdbcType=DOUBLE} QJDW,
 			#{item.pjdw,jdbcType=DOUBLE} PJDW,
 			#{item.qjjs,jdbcType=INTEGER} QJJS,
@@ -268,7 +272,7 @@
             ON FH.LOGIST_CODE = T.QYGS
             LEFT JOIN ORG DH
             ON DH.LOGIST_CODE = T.MDGS
-        WHERE ROWNUM &lt; 10
+            --WHERE ROWNUM &lt; 10
 
         UNION ALL
 
@@ -317,7 +321,7 @@
             ON FH.LOGIST_CODE = XZ.QYGS
             LEFT JOIN ORG DH
             ON DH.LOGIST_CODE = XZ.MDGS
-            WHERE ROWNUM &lt; 10
+            --WHERE ROWNUM &lt; 10
 	</select>
 
     <select id="getGoodsPlanLineList" resultMap="goodsPlanLineMap">
@@ -504,7 +508,7 @@
         AND SD.FCSJ &lt; TRUNC(SYSDATE)
         AND NOT REGEXP_LIKE(GS.GSJC, '(J|C|K)+')
         AND EXISTS (SELECT 1 FROM ZBC Z WHERE Z.CPH = TRIM(SD.CPH))
-        AND ROWNUM &lt; 100
+        --AND ROWNUM &lt; 100
     </select>
 
     <resultMap id="deliverGoodsPlanLineMap" type="cn.tedu.note.entity.VehiclePlanLineEntity">
@@ -563,13 +567,13 @@
                 ORG.LNG || ',' || ORG.LAT
                 END storeGeoCode,
                 0 goodsDistance,
-                YD.YDBH ydbh,
+                T.YDBH ydbh,
                 NVL(YD.ZL / 1000, 0) ton,
                 NVL(YD.TJ, 0) tj,
                 NVL(YD.JS, 0) countOfOrder,
                 ROW_NUMBER() OVER(PARTITION BY T.CPH ORDER BY T.PTQRTHSJ) - 1 goodsSequence,
                 REGEXP_REPLACE(T.TYRDZ,'[ ]+') address
-        FROM (SELECT OD.EOOR_TRANS_NO YDBH,
+        FROM (SELECT NVL(OD.EOOR_TRANS_NO, OD.EOOR_ORDER_NO) YDBH,
                         REGEXP_REPLACE(OD.EOOR_ESCO_SECOND_NAME, '[ ]+') GSJC,
                         OD.EOOR_SHIPPER_EBSA_ADDRESS TYRDZ,
                         OD.EOOR_EODV_NO CPH,
