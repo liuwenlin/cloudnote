@@ -5,6 +5,7 @@ import cn.tedu.note.constant.TransferType;
 import cn.tedu.note.entity.*;
 import cn.tedu.note.service.IAmapService;
 import cn.tedu.note.util.MapApiTool;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -18,7 +19,6 @@ import java.util.concurrent.ExecutionException;
  */
 @Service
 public class AmapService implements IAmapService {
-
 
     /**
      * 获取上下转移线路实体地理编码
@@ -177,9 +177,9 @@ public class AmapService implements IAmapService {
             } else {
                 count = deliverGoodsListSize / AmapApiConstants.WAYPOINTS_MAX_NUM + 1;
             }
-            for(int i = 0; i < count; i++){ //第一个分段
+            for(int i = 0; i < count; i++){
                 StringBuffer strBuff = new StringBuffer();
-                if(i == 0){
+                if(i == 0){ //第一个分段
                     strBuff.append(AmapApiConstants.ROUTE_PLANNING_URL);
                     strBuff.append("&origin=").append(startGeocode);
                     strBuff.append("&destination=").append(vehiclePlanLineEntity.getOrderGeoCodeList().get(AmapApiConstants.WAYPOINTS_MAX_NUM).getGeocode());

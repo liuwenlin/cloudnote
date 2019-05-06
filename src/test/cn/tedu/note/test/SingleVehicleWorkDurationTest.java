@@ -78,7 +78,9 @@ public class SingleVehicleWorkDurationTest extends BaseTest {
 
     @Test
     public void testSingleVehicleWorkDurationStatisticInfo() throws ExecutionException, InterruptedException {
+        LOG.info("---测试开始---");
         singleVehicleWorkDurationService.computeSingleVehicleWorkDuration();
+        LOG.info("---测试结束---");
     }
 
     @Test

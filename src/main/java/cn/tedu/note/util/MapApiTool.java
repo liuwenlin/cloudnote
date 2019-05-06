@@ -207,12 +207,24 @@ public class MapApiTool {
         }
     }
 
+    /**
+     * 每次使用静态并发缓存容器后,必须手动将其数据清空.
+     */
+    public static void clearCache(){
+        geocodeCache.clear();
+        routePlanningCache.clear();
+    }
+
+    /**
+     * 在部署到正式库job任务中后,为防止jvm内存溢出,应显示的使用上文中的clearCache()方法清空缓存中的数据,
+     * 由于数据需要每天在线程池中运行,因此此方法在正式库不能引用,仅用于单元测试关闭静态变量.
+     */
     public static void shutdown(){
         if(es!=null){
             es.shutdown();
         }
+        //关闭请求HttpClient客户端
         HttpUtil.closeClient();
     }
-
 
 }

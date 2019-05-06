@@ -9,10 +9,20 @@
         (SELECT OZ.CPH, OZ.SYB, OZ.DQ, OZ.CX, OZ.SFDRDC
         FROM REPORT_OPR_ZBCXX OZ
         WHERE OZ.ACTIVE = 'Y'),
+        PAM AS (
+           SELECT TO_NUMBER(PC.PARAM_VALUE) ZSBL
+             FROM REPORT_OPR_PARAMS_CONFIG PC
+            WHERE PC.PARAM_NAME = 'CARGO_WEIGHT_CONVERSION_RATIO'
+        ),
 
         DELIVER AS
         (SELECT TRIM(SD.CPH) CPH,
-        NVL(SUM(YD.ZL) / 1000, 0) ZL,
+        NVL(SUM(CASE
+                 WHEN YD.ZL >= YD.TJ * (SELECT A.ZSBL FROM PAM A) THEN
+                   YD.ZL
+                 ELSE
+                   YD.TJ * (SELECT A.ZSBL FROM PAM A)
+               END) / 1000, 0) ZL,
         NVL(SUM(YD.TJ), 0) TJ,
         NVL(SUM(YD.JS), 0) JS
         FROM HYDATA.LD_SHD SD
@@ -30,7 +40,12 @@
 
         PICKUP AS
         (SELECT TRIM(T.CPH) CPH,
-        NVL(SUM(YD.ZL) / 1000, 0) ZL,
+        NVL(SUM(CASE
+                 WHEN YD.ZL >= YD.TJ * (SELECT PAM.ZSBL FROM PAM) THEN
+                   YD.ZL
+                 ELSE
+                   YD.TJ * (SELECT PAM.ZSBL FROM PAM)
+               END) / 1000, 0) ZL,
         NVL(SUM(YD.TJ), 0) TJ,
         NVL(SUM(YD.JS), 0) JS
         FROM HYDATA.LD_HWRKJJD T
@@ -63,6 +78,7 @@
         ON D.CPH = OZ.CPH
         LEFT JOIN PICKUP P
         ON P.CPH = OZ.CPH
+        WHERE ROWNUM &lt; 10
 	</select>
 
 	<resultMap id="singleVehicleWorkMap" type="cn.tedu.note.entity.SingleVehicleWorkDurationEntity">
@@ -155,15 +171,29 @@
             AND NOT REGEXP_LIKE(CP.LOGIST_CODE, '[K|J|C]')
             GROUP BY CP.LOGIST_CODE, CP.CITY, CP.ADDRESS_DETAIL),
 
+        PAM AS (
+           SELECT TO_NUMBER(PC.PARAM_VALUE) ZSBL
+             FROM REPORT_OPR_PARAMS_CONFIG PC
+            WHERE PC.PARAM_NAME = 'CARGO_WEIGHT_CONVERSION_RATIO'
+        ),
+
         T AS (SELECT GS.GSJC QYGS,
                         GS.ZS QYDZ,
                         MDGS.GSJC MDGS,
                         MDGS.ZS MDDZ,
-                        CF.CX_FCBH,
+                        SZ.FCBH CX_FCBH,
                         CF.QYD,
                         CF.MDD,
                         CF.CPH,
-                        NVL(SUM(CASE WHEN YD.SHFS = 0 THEN YD.ZL END) / 1000, 0) ZYDW,
+                        NVL(SUM(CASE
+                                  WHEN YD.SHFS = 0 THEN
+                                    CASE
+                                      WHEN YD.ZL >= YD.TJ * (SELECT A.ZSBL FROM PAM A) THEN
+                                        YD.ZL
+                                      ELSE
+                                        YD.TJ * (SELECT A.ZSBL FROM PAM A)
+                                    END
+                                END) / 1000, 0) ZYDW,
                         NVL(SUM(CASE WHEN YD.SHFS = 0 THEN YD.TJ END), 0) ZYTJ
                     FROM HYDATA.LD_SZYFH SZ
                         JOIN HYDATA.LD_CXFCQK CF
@@ -177,12 +207,12 @@
                         JOIN HYDATA.LD_GS GS
                         ON GS.GSBH = CF.QYD
                         JOIN HYDATA.LD_GS MDGS
-                        ON MDGS.GSBH = CF.MDD
+                        ON MDGS.GSBH = SZ.MDDGS
                         LEFT JOIN HYDATA.LD_CX CX
                         ON CX.CXBH = SZ.CX
                         WHERE SZ.FCSJ &gt;= TRUNC(SYSDATE) - 1
                         AND SZ.FCSJ &lt; TRUNC(SYSDATE)
-                        GROUP BY CF.CX_FCBH,
+                        GROUP BY SZ.FCBH,
                         GS.GSJC,
                         GS.ZS,
                         MDGS.GSJC,
@@ -195,11 +225,19 @@
                         GS.ZS QYDZ,
                         MDGS.GSJC MDGS,
                         MDGS.ZS MDDZ,
-                        CF.CX_FCBH,
+                        SZ.FCBH CX_FCBH,
                         CF.QYD,
                         CF.MDD,
                         CF.CPH,
-                        NVL(SUM(CASE WHEN YD.QRSHFS = 0 THEN YD.ZL END) / 1000, 0) ZYDW,
+                        NVL(SUM(CASE
+                                  WHEN YD.QRSHFS = 0 THEN
+                                    CASE
+                                      WHEN YD.ZL >= YD.TJ * (SELECT A.ZSBL FROM PAM A) THEN
+                                        YD.ZL
+                                      ELSE
+                                        YD.TJ * (SELECT A.ZSBL FROM PAM A)
+                                    END
+                                END) / 1000, 0) ZYDW,
                         NVL(SUM(CASE WHEN YD.QRSHFS = 0 THEN YD.TJ END), 0) ZYTJ
                     FROM HYDATA.LD_XZYFH SZ
                         JOIN HYDATA.LD_CXFCQK CF
@@ -213,12 +251,12 @@
                         JOIN HYDATA.LD_GS GS
                         ON GS.GSBH = CF.QYD
                         JOIN HYDATA.LD_GS MDGS
-                        ON MDGS.GSBH = CF.MDD
+                        ON MDGS.GSBH = SZ.MDDGS
                         LEFT JOIN HYDATA.LD_CX CX
                         ON CX.CXBH = SZ.CX
                         WHERE SZ.FCSJ &gt;= TRUNC(SYSDATE) - 1
                         AND SZ.FCSJ &lt; TRUNC(SYSDATE)
-                        GROUP BY CF.CX_FCBH,
+                        GROUP BY SZ.FCBH,
                         GS.GSJC,
                         GS.ZS,
                         MDGS.GSJC,
@@ -272,7 +310,7 @@
             ON FH.LOGIST_CODE = T.QYGS
             LEFT JOIN ORG DH
             ON DH.LOGIST_CODE = T.MDGS
-            --WHERE ROWNUM &lt; 10
+            WHERE ROWNUM &lt; 10
 
         UNION ALL
 
@@ -321,7 +359,7 @@
             ON FH.LOGIST_CODE = XZ.QYGS
             LEFT JOIN ORG DH
             ON DH.LOGIST_CODE = XZ.MDGS
-            --WHERE ROWNUM &lt; 10
+            WHERE ROWNUM &lt; 10
 	</select>
 
     <select id="getGoodsPlanLineList" resultMap="goodsPlanLineMap">
@@ -454,6 +492,12 @@
              WHERE OZ.ACTIVE = 'Y'
         ),
 
+        PAM AS (
+           SELECT TO_NUMBER(PC.PARAM_VALUE) ZSBL
+             FROM REPORT_OPR_PARAMS_CONFIG PC
+            WHERE PC.PARAM_NAME = 'CARGO_WEIGHT_CONVERSION_RATIO'
+        ),
+
         ORG AS (SELECT CP.LOGIST_CODE,
                         CP.CITY,
                         CP.ADDRESS_DETAIL,
@@ -490,7 +534,14 @@
                 END storeGeoCode,
                 0 goodsDistance,
                 MX.YDBH ydbh,
-                NVL(YD.ZL/1000, 0) ton,
+                NVL(CASE
+                        WHEN YD.ZL >= YD.TJ * (SELECT A.ZSBL FROM PAM A) AND YD.YDZT = 2 THEN
+                          YD.ZL / 1000
+                        WHEN YD.ZL &lt; YD.TJ * (SELECT A.ZSBL FROM PAM A) AND YD.YDZT = 2 THEN
+                          YD.TJ * (SELECT A.ZSBL FROM PAM A) /1000
+                        ELSE
+                          0
+                    END, 0) ton,
                 NVL(YD.TJ, 0) tj,
                 YD.JS countOfOrder,
                 ROW_NUMBER() OVER(PARTITION BY SD.CPH ORDER BY SD.SCSJ) - 1 goodsSequence,
@@ -508,7 +559,7 @@
         AND SD.FCSJ &lt; TRUNC(SYSDATE)
         AND NOT REGEXP_LIKE(GS.GSJC, '(J|C|K)+')
         AND EXISTS (SELECT 1 FROM ZBC Z WHERE Z.CPH = TRIM(SD.CPH))
-        --AND ROWNUM &lt; 100
+        AND ROWNUM &lt; 100
     </select>
 
     <resultMap id="deliverGoodsPlanLineMap" type="cn.tedu.note.entity.VehiclePlanLineEntity">
@@ -534,6 +585,11 @@
         WITH ZBC AS
              (SELECT TRIM(OZ.CPH) CPH FROM REPORT_OPR_ZBCXX OZ WHERE OZ.ACTIVE = 'Y'),
 
+        PAM AS (
+           SELECT TO_NUMBER(PC.PARAM_VALUE) ZSBL
+             FROM REPORT_OPR_PARAMS_CONFIG PC
+            WHERE PC.PARAM_NAME = 'CARGO_WEIGHT_CONVERSION_RATIO'
+        ),
             ORG AS
              (SELECT CP.LOGIST_CODE,
                      CP.CITY,
@@ -568,7 +624,12 @@
                 END storeGeoCode,
                 0 goodsDistance,
                 T.YDBH ydbh,
-                NVL(YD.ZL / 1000, 0) ton,
+                NVL(CASE
+                      WHEN YD.ZL >= YD.TJ * (SELECT A.ZSBL FROM PAM A) THEN
+                        YD.ZL / 1000
+                      ELSE
+                        YD.TJ * (SELECT A.ZSBL FROM PAM A) /1000
+                    END, 0) ton,
                 NVL(YD.TJ, 0) tj,
                 NVL(YD.JS, 0) countOfOrder,
                 ROW_NUMBER() OVER(PARTITION BY T.CPH ORDER BY T.PTQRTHSJ) - 1 goodsSequence,

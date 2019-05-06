@@ -8,10 +8,10 @@ import cn.tedu.note.entity.*;
 import cn.tedu.note.service.IAmapService;
 import cn.tedu.note.service.ISingleVehicleWorkDurationService;
 import cn.tedu.note.util.MapApiTool;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +24,7 @@ import java.util.concurrent.*;
  * @date 2019/4/12 13:28
  */
 @Service
+@Scope("prototype")
 public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurationService {
 
     @Resource
@@ -35,23 +36,23 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
     /**
      * 地理编码解析服务
      */
-    private static ExecutorService doGeocodingService = Executors.newFixedThreadPool(SystemConsts.CPU_CORES);
+    private ExecutorService doGeocodingService = Executors.newFixedThreadPool(SystemConsts.CPU_CORES);
 
-    private static CompletionService doGeocodingCompleteService
+    private  CompletionService doGeocodingCompleteService
             = new ExecutorCompletionService(doGeocodingService);
 
-    private static CompletionService doTransferGeocodingCompleteService
+    private CompletionService doTransferGeocodingCompleteService
             = new ExecutorCompletionService(doGeocodingService);
 
     /**
      * 路径规划计算服务
      */
-    private static ExecutorService doRoutePlanningService = Executors.newFixedThreadPool(SystemConsts.CPU_CORES);
+    private ExecutorService doRoutePlanningService = Executors.newFixedThreadPool(SystemConsts.CPU_CORES);
 
-    private static CompletionService doRoutePlanningCompleteService
+    private CompletionService doRoutePlanningCompleteService
             = new ExecutorCompletionService(doRoutePlanningService);
 
-    private static CompletionService doTransferRoutePlanningCompleteService
+    private CompletionService doTransferRoutePlanningCompleteService
             = new ExecutorCompletionService(doRoutePlanningService);
 
     /**
@@ -346,16 +347,18 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
         //4.1 上下转移线路发车到车公司地理编码检测
         for(TransferPlanLineEntity transferPlan:transferPlanLineList){
             doTransferGeocodingCompleteService.submit(new TransferPlanGeocodeTask(transferPlan));
-            Thread.sleep(6);
+            Thread.sleep(8);
         }
 
         //4.2 提送货运单地理编码计算
         for(VehiclePlanLineEntity entity:deliverVehicleMap.values()){
             doGeocodingCompleteService.submit(new GeocodingTask(entity));
+            Thread.sleep(8);
         }
 
         for(VehiclePlanLineEntity entity:pickupVehicleMap.values()){
             doGeocodingCompleteService.submit(new GeocodingTask(entity));
+            Thread.sleep(8);
         }
 
         //4.3 上下转移线路发车到车公司路径规划计算
@@ -455,6 +458,8 @@ public class SingleVehicleWorkDurationService implements ISingleVehicleWorkDurat
         Long endTime = System.currentTimeMillis();
 
         System.out.println("统计结果插入数据库完毕! 总耗时为: " + (endTime - startTime)/1000 +"秒");
+
+        MapApiTool.clearCache();
 
         //6.关闭请求任务线程池
         MapApiTool.shutdown();
