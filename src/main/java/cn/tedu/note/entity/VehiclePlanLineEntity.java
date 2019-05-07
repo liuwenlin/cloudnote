@@ -18,6 +18,11 @@ public class VehiclePlanLineEntity implements Serializable {
     private String cph;
 
     /**
+     * 货物单编号
+     */
+    private String goodsBill;
+
+    /**
      * 提送货单编号类型
      */
     private String billType;
@@ -50,8 +55,9 @@ public class VehiclePlanLineEntity implements Serializable {
     public VehiclePlanLineEntity() {
     }
 
-    public VehiclePlanLineEntity(String cph, String billType, String city, String storeAddress, String storeGeoCode, List<VehicleOrderEntity> orderGeoCodeList, Integer goodsDistance) {
+    public VehiclePlanLineEntity(String cph, String goodsBill, String billType, String city, String storeAddress, String storeGeoCode, List<VehicleOrderEntity> orderGeoCodeList, Integer goodsDistance) {
         this.cph = cph;
+        this.goodsBill = goodsBill;
         this.billType = billType;
         this.city = city;
         this.storeAddress = storeAddress;
@@ -66,6 +72,14 @@ public class VehiclePlanLineEntity implements Serializable {
 
     public void setCph(String cph) {
         this.cph = cph;
+    }
+
+    public String getGoodsBill() {
+        return goodsBill;
+    }
+
+    public void setGoodsBill(String goodsBill) {
+        this.goodsBill = goodsBill;
     }
 
     public String getBillType() {
@@ -126,6 +140,7 @@ public class VehiclePlanLineEntity implements Serializable {
 
         return new EqualsBuilder()
                 .append(getCph(), that.getCph())
+                .append(getGoodsBill(), that.getGoodsBill())
                 .append(getBillType(), that.getBillType())
                 .append(getCity(), that.getCity())
                 .append(getStoreAddress(), that.getStoreAddress())
@@ -139,6 +154,7 @@ public class VehiclePlanLineEntity implements Serializable {
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
                 .append(getCph())
+                .append(getGoodsBill())
                 .append(getBillType())
                 .append(getCity())
                 .append(getStoreAddress())
@@ -152,6 +168,7 @@ public class VehiclePlanLineEntity implements Serializable {
     public String toString() {
         return "VehiclePlanLineEntity{" +
                 "cph='" + cph + '\'' +
+                ", goodsBill='" + goodsBill + '\'' +
                 ", billType='" + billType + '\'' +
                 ", city='" + city + '\'' +
                 ", storeAddress='" + storeAddress + '\'' +

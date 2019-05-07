@@ -1,10 +1,7 @@
 package cn.tedu.note.test;
 
 import cn.tedu.note.dao.SingleVehicleWorkDurationMapper;
-import cn.tedu.note.entity.GoodsPlanLineEntity;
-import cn.tedu.note.entity.SingleVehicleWorkDurationEntity;
-import cn.tedu.note.entity.TransferPlanLineEntity;
-import cn.tedu.note.entity.VehiclePlanLineEntity;
+import cn.tedu.note.entity.*;
 import cn.tedu.note.service.IAmapService;
 import cn.tedu.note.service.impl.AmapService;
 import cn.tedu.note.service.impl.SingleVehicleWorkDurationService;
@@ -86,9 +83,12 @@ public class SingleVehicleWorkDurationTest extends BaseTest {
     @Test
     public void testDeliverGoodsPlanMap(){
         LOG.info("---测试开始---");
-        Map<String,VehiclePlanLineEntity> list = dao.getDeliverGoodsPlanLineMap();
-        for(VehiclePlanLineEntity entity : list.values()){
-            System.out.println(entity);
+        Map<String, VehicleBillEntity> list = dao.getDeliverVehicleGoodsPlanLineMap();
+        for(VehicleBillEntity vehicleBillEntity : list.values()){
+            System.out.println(vehicleBillEntity);
+//            for(VehiclePlanLineEntity entity : vehicleBillEntity.getVehiclePlanLineEntityList()){
+//                System.out.println(entity);
+//            }
         }
         LOG.info("---测试结束---");
     }

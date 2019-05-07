@@ -1,9 +1,6 @@
 package cn.tedu.note.dao;
 
-import cn.tedu.note.entity.GoodsPlanLineEntity;
-import cn.tedu.note.entity.SingleVehicleWorkDurationEntity;
-import cn.tedu.note.entity.TransferPlanLineEntity;
-import cn.tedu.note.entity.VehiclePlanLineEntity;
+import cn.tedu.note.entity.*;
 import org.apache.ibatis.annotations.MapKey;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
@@ -53,12 +50,15 @@ public interface SingleVehicleWorkDurationMapper {
      */
     List<GoodsPlanLineEntity> getGoodsPlanLineList();
 
+    @MapKey("cph")
+    Map<String, VehicleBillEntity> getDeliverVehicleGoodsPlanLineMap();
+
     /**
      * 返回当前时间前一天每个车辆送货线路数据list集合
      * @return
      */
     @MapKey("cph")
-    Map<String,VehiclePlanLineEntity> getDeliverGoodsPlanLineMap();
+    Map<String, VehiclePlanLineEntity> getDeliverGoodsPlanLineMap();
 
     /**
      * 返回当前时间前一天每个车辆提货线路数据list集合

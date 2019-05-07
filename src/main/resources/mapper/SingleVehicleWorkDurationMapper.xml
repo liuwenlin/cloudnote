@@ -561,7 +561,7 @@
         AND EXISTS (SELECT 1 FROM ZBC Z WHERE Z.CPH = TRIM(SD.CPH))
         AND ROWNUM &lt; 100
     </select>
-
+<!--
     <resultMap id="deliverGoodsPlanLineMap" type="cn.tedu.note.entity.VehiclePlanLineEntity">
         <id column="cph" property="cph" jdbcType="VARCHAR"></id>
         <result column="billType" property="billType" jdbcType="VARCHAR"></result>
@@ -578,6 +578,107 @@
             <result column="ton" property="ton" jdbcType="DOUBLE"></result>
             <result column="tj" property="tj" jdbcType="DOUBLE"></result>
             <result column="goodsSequence" property="goodsSequence" jdbcType="INTEGER"></result>
+        </collection>
+    </resultMap>
+-->
+
+    <select id="getDeliverVehicleGoodsPlanLineMap" resultMap="deliverGoodsPlanLineMap">
+        WITH ZBC AS (
+          SELECT OZ.CPH
+              FROM REPORT_OPR_ZBCXX OZ
+             WHERE OZ.ACTIVE = 'Y'
+        ),
+
+        PAM AS (
+           SELECT TO_NUMBER(PC.PARAM_VALUE) ZSBL
+             FROM REPORT_OPR_PARAMS_CONFIG PC
+            WHERE PC.PARAM_NAME = 'CARGO_WEIGHT_CONVERSION_RATIO'
+        ),
+
+        ORG AS (SELECT CP.LOGIST_CODE,
+                        CP.CITY,
+                        CP.ADDRESS_DETAIL,
+                        MAX(CP.LNG) LNG,
+                        MAX(CP.LAT) LAT
+                  FROM BUTTERFLY.T_BSE_ORG CP
+                  WHERE CP.ACTIVE = 'Y'
+                    AND CP.ADDRESS_DETAIL IS NOT NULL
+                    AND NOT REGEXP_LIKE(CP.LOGIST_CODE, '[K|J|C]')
+                  GROUP BY CP.LOGIST_CODE,
+                            CP.CITY,
+                            CP.ADDRESS_DETAIL
+        )
+
+        SELECT TRIM(SD.CPH) cph,
+                SD.SHDBH goodsBill,
+                '送货单' billType,
+                CASE
+                WHEN ORG.CITY IS NULL THEN
+                REGEXP_REPLACE(GS.GSJC, '[0-9a-zA-Z]+', '')
+                WHEN ORG.CITY = '市辖区' THEN
+                REGEXP_REPLACE(GS.GSJC, '[0-9a-zA-Z]+', '')
+                WHEN ORG.CITY = '省直辖县级行政区划' THEN
+                REGEXP_REPLACE(GS.GSJC, '[0-9a-zA-Z]+', '')
+                ELSE
+                ORG.CITY
+                END AS city,
+                REGEXP_REPLACE(GS.ZS,'[ ]+') storeAddress,
+                CASE
+                WHEN ORG.LNG IS NULL THEN
+                ''
+                ELSE
+                ORG.LNG || ',' || ORG.LAT
+                END storeGeoCode,
+                0 goodsDistance,
+                MX.YDBH ydbh,
+                NVL(CASE
+                        WHEN YD.ZL >= YD.TJ * (SELECT A.ZSBL FROM PAM A) AND YD.YDZT = 2 THEN
+                          YD.ZL / 1000
+                        WHEN YD.ZL &lt; YD.TJ * (SELECT A.ZSBL FROM PAM A) AND YD.YDZT = 2 THEN
+                          YD.TJ * (SELECT A.ZSBL FROM PAM A) /1000
+                        ELSE
+                          0
+                    END, 0) ton,
+                NVL(YD.TJ, 0) tj,
+                YD.JS countOfOrder,
+                ROW_NUMBER() OVER(PARTITION BY SD.SHDBH,SD.CPH ORDER BY SD.SCSJ) - 1 goodsSequence,
+                REGEXP_REPLACE(YD.SHRDZ,'[ ]+') address
+        FROM HYDATA.LD_SHD SD
+        JOIN HYDATA.LD_SHMX MX
+        ON MX.SHDBH = SD.SHDBH
+        JOIN HYDATA.LD_YD YD
+        ON YD.YDBH = MX.YDBH
+        LEFT JOIN HYDATA.LD_GS GS
+        ON GS.GSBH = SD.GSBH
+        LEFT JOIN ORG
+        ON ORG.LOGIST_CODE = GS.GSJC
+        WHERE SD.FCSJ &gt;= TRUNC(SYSDATE - 1)
+        AND SD.FCSJ &lt; TRUNC(SYSDATE)
+        AND NOT REGEXP_LIKE(GS.GSJC, '(J|C|K)+')
+        AND EXISTS (SELECT 1 FROM ZBC Z WHERE Z.CPH = TRIM(SD.CPH))
+        AND ROWNUM &lt; 100
+    </select>
+
+    <resultMap id="deliverGoodsPlanLineMap" type="cn.tedu.note.entity.VehicleBillEntity">
+        <id column="cph" property="cph" jdbcType="VARCHAR"></id>
+        <collection property="vehiclePlanLineEntityList" ofType="cn.tedu.note.entity.VehiclePlanLineEntity">
+            <id column="goodsBill" property="goodsBill" jdbcType="VARCHAR"></id>
+            <result column="cph" property="cph" jdbcType="VARCHAR"></result>
+            <result column="billType" property="billType" jdbcType="VARCHAR"></result>
+            <result column="city" property="city" jdbcType="VARCHAR"></result>
+            <result column="storeAddress" property="storeAddress" jdbcType="VARCHAR"></result>
+            <result column="storeGeoCode" property="storeGeoCode" jdbcType="VARCHAR"></result>
+            <result column="goodsDistance" property="goodsDistance" jdbcType="INTEGER"></result>
+            <collection property="orderGeoCodeList" ofType="cn.tedu.note.entity.VehicleOrderEntity">
+                <id column="ydbh" property="ydbh" jdbcType="VARCHAR"></id>
+                <result column="city" property="city" jdbcType="VARCHAR"></result>
+                <result column="address" property="address" jdbcType="VARCHAR"></result>
+                <result column="geocode" property="geocode" jdbcType="VARCHAR"></result>
+                <result column="countOfOrder" property="countOfOrder" jdbcType="INTEGER"></result>
+                <result column="ton" property="ton" jdbcType="DOUBLE"></result>
+                <result column="tj" property="tj" jdbcType="DOUBLE"></result>
+                <result column="goodsSequence" property="goodsSequence" jdbcType="INTEGER"></result>
+            </collection>
         </collection>
     </resultMap>
 
