@@ -4,10 +4,6 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1" metadata-complete="true">
   <display-name>note</display-name>
-  <context-param>
-    <param-name/>
-    <param-value/>
-  </context-param>
 
   <servlet>
     <description></description>
@@ -54,4 +50,9 @@
     <servlet-name>ImageServlet</servlet-name>
     <url-pattern>/demoimg</url-pattern>
   </servlet-mapping>
+
+  <listener>
+    <listener-class>org.quartz.ee.servlet.QuartzInitializerListener</listener-class>
+  </listener>
+
 </web-app>

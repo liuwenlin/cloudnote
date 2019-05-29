@@ -74,13 +74,6 @@ public class SingleVehicleWorkDurationTest extends BaseTest {
     }
 
     @Test
-    public void testSingleVehicleWorkDurationStatisticInfo() throws ExecutionException, InterruptedException {
-        LOG.info("---测试开始---");
-        singleVehicleWorkDurationService.computeSingleVehicleWorkDuration();
-        LOG.info("---测试结束---");
-    }
-
-    @Test
     public void testDeliverGoodsPlanMap(){
         LOG.info("---测试开始---");
         Map<String, VehicleBillEntity> list = dao.getDeliverVehicleGoodsPlanLineMap();
@@ -105,6 +98,14 @@ public class SingleVehicleWorkDurationTest extends BaseTest {
 //        for(VehiclePlanLineEntity entity : list.values()){
 //            System.out.println(entity);
 //        }
+        LOG.info("---测试结束---");
+    }
+
+
+    @Test
+    public void testSingleVehicleWorkDurationStatisticInfo() throws ExecutionException, InterruptedException {
+        LOG.info("---测试开始---");
+        singleVehicleWorkDurationService.computeSingleVehicleWorkDuration();
         LOG.info("---测试结束---");
     }
 

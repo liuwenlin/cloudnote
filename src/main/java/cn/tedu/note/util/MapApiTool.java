@@ -56,7 +56,7 @@ public class MapApiTool {
                     return 0;
                 }
                 int distance = Integer.parseInt(objNode.textValue());
-                System.out.println("规划路径返回值: "+distance+ "米");
+                System.out.println("规划路径返回值: " + distance + "米");
                 return distance;
             }
         } catch (IOException e) {
@@ -140,7 +140,7 @@ public class MapApiTool {
                     return "";
                 }
                 String geocode = objNode.textValue();
-                System.out.println("接口返回的地理编码为: "+geocode+ "");
+                System.out.println("接口返回的地理编码为: " + geocode);
                 return geocode;
             }
         } catch (IOException e) {

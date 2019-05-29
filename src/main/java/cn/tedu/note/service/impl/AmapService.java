@@ -5,6 +5,7 @@ import cn.tedu.note.constant.TransferType;
 import cn.tedu.note.entity.*;
 import cn.tedu.note.service.IAmapService;
 import cn.tedu.note.util.MapApiTool;
+import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,8 @@ import java.util.concurrent.ExecutionException;
  */
 @Service
 public class AmapService implements IAmapService {
+
+    private static Logger LOG = Logger.getLogger(AmapService.class);
 
     /**
      * 获取上下转移线路实体地理编码
@@ -56,6 +59,10 @@ public class AmapService implements IAmapService {
                 transferPlanLineEntity.setEndGeoCode(apme.getGeocode());
             }
         }
+        LOG.info("当前转移线路发车编号: " + transferPlanLineEntity.getLine()
+                + " 车牌号: " + transferPlanLineEntity.getCph()
+                + " 起始地理编码为: " + transferPlanLineEntity.getStartGeoCode()
+                + " 目的地理编码为: " + transferPlanLineEntity.getEndGeoCode());
 
         return transferPlanLineEntity;
     }
@@ -76,6 +83,10 @@ public class AmapService implements IAmapService {
         } else {
             transferPlanLineEntity.setPlannedDistance(apme.getAmapResultDistance());
         }
+        LOG.info("当前转移线路发车编号: " + transferPlanLineEntity.getLine()
+                + " 转移类型: " + transferPlanLineEntity.getType()
+                + " 车牌号: " + transferPlanLineEntity.getCph()
+                + " 转移线路路径规划距离为: " + transferPlanLineEntity.getPlannedDistance());
         return transferPlanLineEntity;
     }
 
@@ -95,7 +106,12 @@ public class AmapService implements IAmapService {
                     .append("&origin=").append(transferPlanLineEntity.getEndGeoCode())
                     .append("&destination=").append(transferPlanLineEntity.getStartGeoCode());
         }
-        return strBuff.toString();
+        String url = strBuff.toString();
+        LOG.info("当前转移线路发车编号: " + transferPlanLineEntity.getLine()
+                + " 转移类型: " + transferPlanLineEntity.getType()
+                + " 车牌号: " + transferPlanLineEntity.getCph()
+                + " 转移线路请求url为: " + url);
+        return url;
     }
     /**
      * 获取体送货单中每个运单明细的地理编码
@@ -122,17 +138,23 @@ public class AmapService implements IAmapService {
 
         for(VehicleOrderEntity order:vehiclePlanLineEntity.getOrderGeoCodeList()){
             multiEntityMap.put(order.getYdbh(),MapApiTool.getGeocode(getGeocodeUrl(order)));
-            Thread.sleep(10);
+            Thread.sleep(50);
         }
 
         for(VehicleOrderEntity order:vehiclePlanLineEntity.getOrderGeoCodeList()){
             AmapApiGeocodeMultiEntity geocodeMultiResult = multiEntityMap.get(order.getYdbh());
             if(geocodeMultiResult.getGeocode() == null){
-//                System.out.println("当前地理编码通过geocodeFuture返回");
                 order.setGeocode(geocodeMultiResult.getFutureGeocode().get());
+                LOG.info("当前线路类型: " + vehiclePlanLineEntity.getBillType()
+                        + " 车牌号: " + vehiclePlanLineEntity.getCph()
+                        + " 运单编号: " + order.getYdbh()
+                        + " 地理编码: " + order.getGeocode());
             } else {
-//                System.out.println("当前地理编码通过geocode返回");
                 order.setGeocode(geocodeMultiResult.getGeocode());
+                LOG.info("当前线路类型: " + vehiclePlanLineEntity.getBillType()
+                        + " 车牌号: " + vehiclePlanLineEntity.getCph()
+                        + " 运单编号: " + order.getYdbh()
+                        + " 地理编码: " + order.getGeocode());
             }
         }
 
@@ -163,10 +185,8 @@ public class AmapService implements IAmapService {
             AmapApiRoutePlanningMultiEntity apme = MapApiTool.getDistance(getRoutePlanningUrl(startGeocode,vehiclePlanLineEntity));
             if(apme.getAmapResultDistance() == null){
                 vehiclePlanLineEntity.setGoodsDistance(apme.getFutureDistance().get());
-                System.out.println("当前请求路径规划接口通过future返回的距离为: " + apme.getFutureDistance().get());
             } else {
                 vehiclePlanLineEntity.setGoodsDistance(apme.getAmapResultDistance());
-                System.out.println("当前请求路径规划接口通过缓存返回的距离为: " + apme.getAmapResultDistance());
             }
         } else {
             System.out.println("送货单列表大于16单的情况------");
@@ -178,8 +198,8 @@ public class AmapService implements IAmapService {
                 count = deliverGoodsListSize / AmapApiConstants.WAYPOINTS_MAX_NUM + 1;
             }
             for(int i = 0; i < count; i++){
-                StringBuffer strBuff = new StringBuffer();
                 if(i == 0){ //第一个分段
+                    StringBuffer strBuff = new StringBuffer();
                     strBuff.append(AmapApiConstants.ROUTE_PLANNING_URL);
                     strBuff.append("&origin=").append(startGeocode);
                     strBuff.append("&destination=").append(vehiclePlanLineEntity.getOrderGeoCodeList().get(AmapApiConstants.WAYPOINTS_MAX_NUM).getGeocode());
@@ -187,13 +207,19 @@ public class AmapService implements IAmapService {
                     for(int j = 0; j < AmapApiConstants.WAYPOINTS_MAX_NUM; j++){
                         strBuff.append(vehiclePlanLineEntity.getOrderGeoCodeList().get(j).getGeocode()).append(";");
                     }
-                    AmapApiRoutePlanningMultiEntity arp = MapApiTool.getDistance(strBuff.substring(0,strBuff.length()-1));
+                    String url = strBuff.substring(0,strBuff.length()-1);
+                    AmapApiRoutePlanningMultiEntity arp = MapApiTool.getDistance(url);
+                    LOG.info("当前线路类型: " + vehiclePlanLineEntity.getBillType()
+                            + " 车牌号: " + vehiclePlanLineEntity.getCph()
+                            + " 第一个分段请求url为: " + url);
                     if(arp.getAmapResultDistance() == null){
                         vehiclePlanLineEntity.setGoodsDistance(arp.getFutureDistance().get());
+
                     } else {
                         vehiclePlanLineEntity.setGoodsDistance(arp.getAmapResultDistance());
                     }
                 } else if (i == count - 1){ //最后一个分段
+                    StringBuffer strBuff = new StringBuffer();
                     strBuff.append(AmapApiConstants.ROUTE_PLANNING_URL);
                     strBuff.append("&origin=").append(vehiclePlanLineEntity.getOrderGeoCodeList().get(i*AmapApiConstants.WAYPOINTS_MAX_NUM).getGeocode());
                     strBuff.append("&destination=").append(vehiclePlanLineEntity.getStoreGeoCode());
@@ -201,13 +227,18 @@ public class AmapService implements IAmapService {
                     for(int j = 0; j < (deliverGoodsListSize - i * AmapApiConstants.WAYPOINTS_MAX_NUM); j++){
                         strBuff.append(vehiclePlanLineEntity.getOrderGeoCodeList().get(i * AmapApiConstants.WAYPOINTS_MAX_NUM + j).getGeocode()).append(";");
                     }
-                    AmapApiRoutePlanningMultiEntity arp = MapApiTool.getDistance(strBuff.substring(0,strBuff.length()-1));
+                    String url = strBuff.substring(0,strBuff.length()-1);
+                    AmapApiRoutePlanningMultiEntity arp = MapApiTool.getDistance(url);
+                    LOG.info("当前线路类型: " + vehiclePlanLineEntity.getBillType()
+                            + " 车牌号: " + vehiclePlanLineEntity.getCph()
+                            + " 最后一个分段请求url为: " + url);
                     if(arp.getAmapResultDistance() == null){
                         vehiclePlanLineEntity.setGoodsDistance(arp.getFutureDistance().get() + vehiclePlanLineEntity.getGoodsDistance());
                     } else {
                         vehiclePlanLineEntity.setGoodsDistance(arp.getAmapResultDistance() + vehiclePlanLineEntity.getGoodsDistance());
                     }
                 } else { //中间分段
+                    StringBuffer strBuff = new StringBuffer();
                     strBuff.append(AmapApiConstants.ROUTE_PLANNING_URL);
                     strBuff.append("&origin=").append(vehiclePlanLineEntity.getOrderGeoCodeList().get(i*AmapApiConstants.WAYPOINTS_MAX_NUM).getGeocode());
                     strBuff.append("&destination=").append(vehiclePlanLineEntity.getOrderGeoCodeList().get((i+1)*AmapApiConstants.WAYPOINTS_MAX_NUM - 1).getGeocode());
@@ -215,7 +246,11 @@ public class AmapService implements IAmapService {
                     for(int j = 1; j < AmapApiConstants.WAYPOINTS_MAX_NUM; j++){
                         strBuff.append(vehiclePlanLineEntity.getOrderGeoCodeList().get(i*AmapApiConstants.WAYPOINTS_MAX_NUM + j).getGeocode()).append(";");
                     }
-                    AmapApiRoutePlanningMultiEntity arp = MapApiTool.getDistance(strBuff.substring(0,strBuff.length()-1));
+                    String url = strBuff.substring(0,strBuff.length()-1);
+                    AmapApiRoutePlanningMultiEntity arp = MapApiTool.getDistance(url);
+                    LOG.info("当前线路类型: " + vehiclePlanLineEntity.getBillType()
+                            + " 车牌号: " + vehiclePlanLineEntity.getCph()
+                            + " 中间分段请求url为: " + url);
                     if(arp.getAmapResultDistance() == null){
                         vehiclePlanLineEntity.setGoodsDistance(arp.getFutureDistance().get() + vehiclePlanLineEntity.getGoodsDistance());
                     } else {
@@ -224,6 +259,9 @@ public class AmapService implements IAmapService {
                 }
             }
         }
+        LOG.info("当前线路类型: " + vehiclePlanLineEntity.getBillType()
+                + " 车牌号: " + vehiclePlanLineEntity.getCph()
+                + " 路径规划距离为: " + vehiclePlanLineEntity.getGoodsDistance());
 
         return vehiclePlanLineEntity;
     }
@@ -242,9 +280,11 @@ public class AmapService implements IAmapService {
         for(VehicleOrderEntity orders:vehiclePlanLineEntity.getOrderGeoCodeList()){
             strBuff.append(orders.getGeocode()).append(";");
         }
-        strBuff.substring(0,strBuff.length()-1);
-        System.out.println("路径规划请求url为:"+strBuff.toString());
-        return strBuff.toString();
+        String url = strBuff.substring(0,strBuff.length()-1);
+        LOG.info("当前线路类型: " + vehiclePlanLineEntity.getBillType()
+                + " 车牌号: " + vehiclePlanLineEntity.getCph()
+                + " 请求url为: " + url);
+        return url;
     }
 
     /**
