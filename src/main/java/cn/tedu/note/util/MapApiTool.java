@@ -10,6 +10,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.concurrent.*;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author liuwenlin
@@ -37,6 +39,19 @@ public class MapApiTool {
 
     private static ConcurrentHashMap<String,FutureTask<String>> processingGeocodeCache
             = new ConcurrentHashMap<String, FutureTask<String>>();
+
+
+    /**
+     * 地理编码请求线程池任务提交对象锁
+     */
+
+    private static Lock geocodeLock = new ReentrantLock();
+
+    /**
+     * 里程计算请求线程池任务提交对象锁
+     */
+
+    private static Lock routePlanLock = new ReentrantLock();
 
 
     /**
@@ -96,7 +111,14 @@ public class MapApiTool {
             distanceFuture = processingRoutePlanningCache.putIfAbsent(url,ft);
             if(distanceFuture==null){ //表示当前没有正在执行的任务
                 distanceFuture = ft;
+                routePlanLock.lock();
+                try {
+                    Thread.sleep(22); //提交任务的线程先延时(按照任务对应地图api请求频率进行设置)
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 es.execute(ft);
+                routePlanLock.unlock();
                 System.out.println("地图路径规划请求行车距离任务已启动,请等待完成>>>");
             } else {
                 System.out.println("已有地图路径规划请求行车距离任务已启动,不必重新启动");
@@ -185,7 +207,14 @@ public class MapApiTool {
             geocodeFuture = processingGeocodeCache.putIfAbsent(url,ft);
             if(geocodeFuture==null){ //表示当前没有正在执行的任务
                 geocodeFuture = ft;
+                geocodeLock.lock();
+                try {
+                    Thread.sleep(6); //提交任务的线程先延时(按照任务对应地图请求频率进行设置)
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 es.execute(ft);
+                geocodeLock.unlock();
                 System.out.println("地图地理编码请求任务已启动,请等待完成>>>");
             } else {
                 System.out.println("已有地图地理编码请求任务已启动,不必重新启动");

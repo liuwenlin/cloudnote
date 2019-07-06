@@ -80,7 +80,7 @@
         ON D.CPH = OZ.CPH
         LEFT JOIN PICKUP P
         ON P.CPH = OZ.CPH
-        --WHERE ROWNUM &lt; 10
+        WHERE ROWNUM &lt; 10
 	</select>
 
 	<resultMap id="singleVehicleWorkMap" type="cn.tedu.note.entity.SingleVehicleWorkDurationEntity">
@@ -313,6 +313,7 @@
             LEFT JOIN ORG DH
             ON DH.LOGIST_CODE = T.MDGS
             --WHERE T.CPH = '京Q50UX8'
+            WHERE ROWNUM &lt; 10
 
         UNION ALL
 
@@ -362,6 +363,7 @@
             LEFT JOIN ORG DH
             ON DH.LOGIST_CODE = XZ.MDGS
             --WHERE XZ.CPH = '京Q50UX8'
+            WHERE ROWNUM &lt; 10
 	</select>
 
     <select id="getGoodsPlanLineList" resultMap="goodsPlanLineMap">
@@ -659,7 +661,7 @@
         AND NOT REGEXP_LIKE(GS.GSJC, '(J|C|K)+')
         AND EXISTS (SELECT 1 FROM ZBC Z WHERE Z.CPH = TRIM(SD.CPH))
         --AND SD.CPH = '京Q50UX8'
-        --AND ROWNUM &lt; 100
+        AND ROWNUM &lt; 100
     </select>
 
     <resultMap id="deliverGoodsPlanLineMap" type="cn.tedu.note.entity.VehicleBillEntity">
@@ -758,7 +760,7 @@
        WHERE EXISTS (SELECT 1 FROM ZBC Z WHERE Z.CPH = T.CPH)
          AND NOT REGEXP_LIKE(T.GSJC, '(J|C|K)+')
          --AND T.CPH = '京Q50UX8'
-         --AND ROWNUM &lt; 100
+         AND ROWNUM &lt; 100
     </select>
 
     <resultMap id="pickupGoodsPlanLineMap" type="cn.tedu.note.entity.VehiclePlanLineEntity">
