@@ -66,4 +66,8 @@ public interface SingleVehicleWorkDurationMapper {
      */
     @MapKey("cph")
     Map<String,VehiclePlanLineEntity> getPickupGoodsPlanLineMap();
+
+    List<OwnedCompanyGeocodingEntity> getOwnedCompanyGeocodingList();
+
+    int updateOwnedCompanyGeocodingInfoBatch(List<OwnedCompanyGeocodingEntity> list);
 }

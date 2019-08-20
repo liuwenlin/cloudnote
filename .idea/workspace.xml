@@ -7,7 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9568f10c-6531-427a-a5b5-e49d8ef99e47" name="Default Changelist" comment="delete redundant import package info.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/OwnedCompanyGeocodingEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/IGeocodingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/GeocodingServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,14 +79,14 @@
           <entry key="dtd" value="8" />
           <entry key="html" value="21" />
           <entry key="ico" value="3" />
-          <entry key="java" value="362" />
+          <entry key="java" value="371" />
           <entry key="js" value="18" />
           <entry key="jsp" value="4" />
           <entry key="png" value="4" />
           <entry key="properties" value="11" />
           <entry key="sql" value="5" />
           <entry key="ts" value="4" />
-          <entry key="xml" value="104" />
+          <entry key="xml" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -89,13 +96,13 @@
           <entry key="DTD" value="8" />
           <entry key="HTML" value="21" />
           <entry key="Image" value="7" />
-          <entry key="JAVA" value="362" />
+          <entry key="JAVA" value="371" />
           <entry key="JSP" value="4" />
           <entry key="JavaScript" value="18" />
           <entry key="Properties" value="11" />
           <entry key="Scratch" value="5" />
           <entry key="TypeScript" value="4" />
-          <entry key="XML" value="104" />
+          <entry key="XML" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -103,26 +110,26 @@
           <entry key="css" value="361" />
           <entry key="ft" value="48" />
           <entry key="html" value="1190" />
-          <entry key="java" value="10106" />
+          <entry key="java" value="10567" />
           <entry key="js" value="361" />
           <entry key="properties" value="49" />
           <entry key="sql" value="33" />
           <entry key="txt" value="84" />
-          <entry key="xml" value="1808" />
+          <entry key="xml" value="2350" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="361" />
           <entry key="HTML" value="1190" />
-          <entry key="JAVA" value="10106" />
+          <entry key="JAVA" value="10567" />
           <entry key="JavaScript" value="361" />
           <entry key="PLAIN_TEXT" value="84" />
           <entry key="Properties" value="49" />
-          <entry key="SQL" value="149" />
+          <entry key="SQL" value="196" />
           <entry key="Scratch" value="33" />
           <entry key="VTL" value="48" />
-          <entry key="XML" value="1659" />
+          <entry key="XML" value="2154" />
         </counts>
       </usages-collector>
     </session>
@@ -133,31 +140,52 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/GeocodingServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="237">
+              <caret line="91" column="35" lean-forward="true" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#937#938#0" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+            <state relative-caret-position="112">
+              <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            <state relative-caret-position="91">
+              <caret line="804" lean-forward="true" selection-start-line="804" selection-end-line="804" />
+              <folding>
+                <element signature="n#select#0;n#mapper#0;n#!!top" />
+                <element signature="e#2317#2321#0" expanded="true" />
+                <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+                <element signature="n#select#1;n#mapper#0;n#!!top" />
+                <element signature="n#resultMap#1;n#mapper#0;n#!!top" />
+                <element signature="n#insert#0;n#mapper#0;n#!!top" />
+                <element signature="n#select#2;n#mapper#0;n#!!top" />
+                <element signature="e#11975#11979#0" expanded="true" />
+                <element signature="n#select#3;n#mapper#0;n#!!top" />
+                <element signature="n#resultMap#2;n#mapper#0;n#!!top" />
+                <element signature="n#select#4;n#mapper#0;n#!!top" />
+                <element signature="e#21390#22788#0" />
+                <element signature="n#select#5;n#mapper#0;n#!!top" />
+                <element signature="n#resultMap#3;n#mapper#0;n#!!top" />
+                <element signature="n#select#6;n#mapper#0;n#!!top" />
+                <element signature="n#resultMap#4;n#mapper#0;n#!!top" />
+                <element signature="n#select#7;n#mapper#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,15 +196,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>header</find>
       <find>header-brand</find>
       <find>hidden-xs</find>
       <find>pull-right</find>
@@ -206,6 +233,7 @@
       <find>getDeliverVehicleGoodsPlanLineMap</find>
       <find>deliverGoodsPlanLineMap</find>
       <find>getPickupGoodsPlanLineMap</find>
+      <find>JdbcType</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -218,9 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/CycleBarrierLockDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/CountDownLatchLockDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/ConditionLockDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/SophomoreLockDemo.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/activity_detail.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mail_config.html" />
@@ -261,14 +286,17 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/GoodsBillEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/VehicleBillEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/VehiclePlanLineEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java" />
-        <option value="$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/AmapService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/OwnedCompanyGeocodingEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/IGeocodingService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" />
+        <option value="$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/GeocodingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" />
       </list>
     </option>
   </component>
@@ -329,9 +357,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -467,7 +495,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566284836342" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566294762504" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../zookeeper_study" />
@@ -476,7 +504,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.45021644" />
-    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -510,7 +538,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SingleVehicleWorkDurationTest.testPickupGoodsPlanMap">
+  <component name="RunManager" selected="JUnit.SingleVehicleWorkDurationTest.testGeocoding">
     <configuration name="SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloudnote" />
       <extension name="coverage">
@@ -522,6 +550,22 @@
       <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
       <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.SingleVehicleWorkDurationTest" />
       <option name="METHOD_NAME" value="testDeliverGoodsPlanMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleVehicleWorkDurationTest.testGeocoding" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloudnote" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.tedu.note.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.SingleVehicleWorkDurationTest" />
+      <option name="METHOD_NAME" value="testGeocoding" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -554,22 +598,6 @@
       <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
       <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.SingleVehicleWorkDurationTest" />
       <option name="METHOD_NAME" value="testPickupGoodsPlanMap" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cloudnote" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.tedu.note.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.tedu.note.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.tedu.note.test.SingleVehicleWorkDurationTest" />
-      <option name="METHOD_NAME" value="testSingleVehicleWorkDurationMap" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -667,17 +695,17 @@
       <item itemvalue="Tomcat Server.cloudnote_server" />
       <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" />
       <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testPickupGoodsPlanMap" />
-      <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationMap" />
       <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" />
       <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGetTransferPlanLineList" />
+      <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGeocoding" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGeocoding" />
         <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testPickupGoodsPlanMap" />
         <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGetTransferPlanLineList" />
-        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" />
         <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" />
-        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationMap" />
+        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -765,39 +793,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.05.07 at 15h 05m 18s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testDeliverGoodsPlanMap - 2019.05.07 at 15h 07m 23s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.05.07 at 15h 25m 22s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.05.07 at 15h 51m 04s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationMap - 2019.07.06 at 16h 04m 20s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testGetTransferPlanLineList - 2019.07.06 at 16h 17m 36s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testGetTransferPlanLineList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testDeliverGoodsPlanMap - 2019.07.06 at 16h 19m 39s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testPickupGoodsPlanMap - 2019.07.06 at 16h 41m 55s.xml">
+    <history-entry file="SingleVehicleWorkDurationTest_testPickupGoodsPlanMap - 2019.08.20 at 16h 02m 21s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testPickupGoodsPlanMap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.07.06 at 16h 50m 31s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
+    <history-entry file="SingleVehicleWorkDurationTest_testPickupGoodsPlanMap - 2019.08.20 at 16h 06m 07s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testPickupGoodsPlanMap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleVehicleWorkDurationTest_testGetTransferPlanLineList - 2019.08.20 at 15h 03m 00s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testGetTransferPlanLineList" configurationId="JUnit" />
+    <history-entry file="SingleVehicleWorkDurationTest_testPickupGoodsPlanMap - 2019.08.20 at 16h 09m 06s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testPickupGoodsPlanMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingleVehicleWorkDurationTest_testGeocoding - 2019.08.20 at 16h 10m 01s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testGeocoding" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingleVehicleWorkDurationTest_testGeocoding - 2019.08.20 at 16h 13m 46s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testGeocoding" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingleVehicleWorkDurationTest_testGeocoding - 2019.08.20 at 16h 23m 05s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testGeocoding" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingleVehicleWorkDurationTest_testGeocoding - 2019.08.20 at 16h 28m 14s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testGeocoding" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingleVehicleWorkDurationTest_testGeocoding - 2019.08.20 at 16h 30m 22s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testGeocoding" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingleVehicleWorkDurationTest_testGeocoding - 2019.08.20 at 16h 34m 29s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testGeocoding" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingleVehicleWorkDurationTest_testGeocoding - 2019.08.20 at 17h 26m 56s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testGeocoding" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343175000" />
+    <option name="totallyTimeSpent" value="350142000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -811,7 +839,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.25737265" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.2613941" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -822,11 +850,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.41985816" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.44539008" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.22553192" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4609929" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49932975" weight="0.4496454" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49932975" weight="0.40141845" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.2680851" />
@@ -935,27 +963,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/RunAfters.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/VehicleOrderEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="182" column="18" selection-start-line="182" selection-start-column="18" selection-end-line="182" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/lock/CycleBarrierLockDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-600">
@@ -1242,68 +1249,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/IGeocodingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        <state relative-caret-position="190">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="765" column="13" lean-forward="true" selection-start-line="765" selection-start-column="13" selection-end-line="765" selection-end-column="13" />
-          <folding>
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="e#2317#2321#0" expanded="true" />
-            <element signature="e#2856#2860#0" expanded="true" />
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="e#11975#11979#0" expanded="true" />
-            <element signature="e#13516#13520#0" expanded="true" />
-            <element signature="n#select#3;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#4;n#mapper#0;n#!!top" />
-            <element signature="e#21326#22724#0" />
-            <element signature="n#select#5;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#3;n#mapper#0;n#!!top" />
-            <element signature="n#select#6;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#4;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2892">
-          <caret line="167" column="33" lean-forward="true" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
+        <state relative-caret-position="247">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        <state relative-caret-position="342">
+          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/dao/SingleVehicleWorkDurationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="69" column="66" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741">
+          <caret line="115" column="35" lean-forward="true" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/entity/OwnedCompanyGeocodingEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/GeocodingServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="237">
+          <caret line="91" column="35" lean-forward="true" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+        <state relative-caret-position="112">
+          <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="804" lean-forward="true" selection-start-line="804" selection-end-line="804" />
+          <folding>
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="e#2317#2321#0" expanded="true" />
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#1;n#mapper#0;n#!!top" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+            <element signature="e#11975#11979#0" expanded="true" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" />
+            <element signature="e#21390#22788#0" />
+            <element signature="n#select#5;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#3;n#mapper#0;n#!!top" />
+            <element signature="n#select#6;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#4;n#mapper#0;n#!!top" />
+            <element signature="n#select#7;n#mapper#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

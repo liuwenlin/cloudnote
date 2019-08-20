@@ -782,4 +782,39 @@
         </collection>
     </resultMap>
 
+    <select id="getOwnedCompanyGeocodingList" resultMap="geocodingMap">
+      SELECT SC.LOGIST_CODE companyName,
+               SC.CITY city,
+               SC.ADDRESS_DETAIL address,
+               SC.LNG longitude,
+               SC.LAT latitude,
+               SC.LNG_A longitudeA,
+               SC.LAT_A latitudeA
+        FROM REPORT_SGL_CAR_GEO_TEMP SC
+    </select>
+
+    <resultMap id="geocodingMap" type="cn.tedu.note.entity.OwnedCompanyGeocodingEntity">
+        <id property="companyName" column="companyName" jdbcType="VARCHAR"></id>
+        <result property="city" column="city" jdbcType="VARCHAR"></result>
+        <result property="address" column="address" jdbcType="VARCHAR"></result>
+        <result property="longitude" column="longitude" jdbcType="DOUBLE"></result>
+        <result property="latitude" column="latitude" jdbcType="DOUBLE"></result>
+        <result property="longitudeA" column="longitudeA" jdbcType="DOUBLE"></result>
+        <result property="latitudeA" column="latitudeA" jdbcType="DOUBLE"></result>
+    </resultMap>
+
+    <update id="updateOwnedCompanyGeocodingInfoBatch" parameterType="java.util.List">
+        merge into REPORT_SGL_CAR_GEO_TEMP SC
+        using (
+        select a.companyName,a.longitudeA, a.latitudeA from
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator="union all">
+            select #{item.companyName} companyName, #{item.longitudeA} longitudeA, #{item.latitudeA} latitudeA
+            from dual
+        </foreach>
+           a
+        ) s on (s.companyName = SC.LOGIST_CODE)
+        when matched then
+          update set SC.LNG_A = s.longitudeA, SC.LAT_A = s.latitudeA
+    </update>
+
 </mapper>

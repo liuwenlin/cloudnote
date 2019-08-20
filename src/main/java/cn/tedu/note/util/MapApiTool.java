@@ -113,12 +113,13 @@ public class MapApiTool {
                 distanceFuture = ft;
                 routePlanLock.lock();
                 try {
+                    es.execute(ft);
                     Thread.sleep(22); //提交任务的线程先延时(按照任务对应地图api请求频率进行设置)
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                } finally {
+                    routePlanLock.unlock();
                 }
-                es.execute(ft);
-                routePlanLock.unlock();
                 System.out.println("地图路径规划请求行车距离任务已启动,请等待完成>>>");
             } else {
                 System.out.println("已有地图路径规划请求行车距离任务已启动,不必重新启动");
@@ -209,12 +210,13 @@ public class MapApiTool {
                 geocodeFuture = ft;
                 geocodeLock.lock();
                 try {
+                    es.execute(ft);
                     Thread.sleep(6); //提交任务的线程先延时(按照任务对应地图请求频率进行设置)
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                } finally {
+                    geocodeLock.unlock();
                 }
-                es.execute(ft);
-                geocodeLock.unlock();
                 System.out.println("地图地理编码请求任务已启动,请等待完成>>>");
             } else {
                 System.out.println("已有地图地理编码请求任务已启动,不必重新启动");
