@@ -15,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SingleVehicleWorkDurationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SingleVehicleWorkDurationMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -165,8 +166,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="804" lean-forward="true" selection-start-line="804" selection-end-line="804" />
+            <state relative-caret-position="90">
+              <caret line="805" column="53" selection-start-line="805" selection-start-column="53" selection-end-line="805" selection-end-column="53" />
               <folding>
                 <element signature="n#select#0;n#mapper#0;n#!!top" />
                 <element signature="e#2317#2321#0" expanded="true" />
@@ -495,7 +496,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566294762504" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566294848984" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../zookeeper_study" />
@@ -825,7 +826,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350142000" />
+    <option name="totallyTimeSpent" value="350390000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -850,13 +851,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.41985816" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.44539008" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4609929" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4609929" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49932975" weight="0.40141845" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.5432624" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.2680851" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.30638298" />
       <window_info anchor="bottom" id="Spring" order="12" weight="0.32907802" />
@@ -1315,8 +1316,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="804" lean-forward="true" selection-start-line="804" selection-end-line="804" />
+        <state relative-caret-position="90">
+          <caret line="805" column="53" selection-start-line="805" selection-start-column="53" selection-end-line="805" selection-end-column="53" />
           <folding>
             <element signature="n#select#0;n#mapper#0;n#!!top" />
             <element signature="e#2317#2321#0" expanded="true" />
