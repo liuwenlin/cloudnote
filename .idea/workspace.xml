@@ -8,10 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9568f10c-6531-427a-a5b5-e49d8ef99e47" name="Default Changelist" comment="delete redundant import package info.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,7 +36,7 @@
     <session id="-758561157">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="57" />
+          <entry key="project.closed" value="58" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.18" value="1" />
@@ -136,11 +132,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2843">
-              <caret line="633" lean-forward="true" selection-start-line="633" selection-end-line="633" />
+            <state relative-caret-position="184">
+              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,20 +144,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/util/MapApiTool.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2892">
-              <caret line="167" column="33" lean-forward="true" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
+            <state relative-caret-position="202">
+              <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+            <state relative-caret-position="238">
+              <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -318,7 +314,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1940" />
@@ -333,6 +329,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -374,6 +372,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="note" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="note" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -383,7 +390,26 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="note" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="note" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloudnote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="note" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cloudnote" type="b2602c69:ProjectViewProjectNode" />
@@ -434,8 +460,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -443,7 +467,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562406670436" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566284836342" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../zookeeper_study" />
@@ -486,7 +510,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo">
+  <component name="RunManager" selected="JUnit.SingleVehicleWorkDurationTest.testPickupGoodsPlanMap">
     <configuration name="SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloudnote" />
       <extension name="coverage">
@@ -649,10 +673,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" />
         <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testPickupGoodsPlanMap" />
-        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" />
         <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testGetTransferPlanLineList" />
+        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" />
+        <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testDeliverGoodsPlanMap" />
         <item itemvalue="JUnit.SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationMap" />
       </list>
     </recent_temporary>
@@ -741,9 +765,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.05.07 at 14h 26m 01s.xml">
-      <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.05.07 at 15h 05m 18s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
     </history-entry>
@@ -771,9 +792,12 @@
     <history-entry file="SingleVehicleWorkDurationTest_testSingleVehicleWorkDurationStatisticInfo - 2019.07.06 at 16h 50m 31s.xml">
       <configuration name="SingleVehicleWorkDurationTest.testSingleVehicleWorkDurationStatisticInfo" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SingleVehicleWorkDurationTest_testGetTransferPlanLineList - 2019.08.20 at 15h 03m 00s.xml">
+      <configuration name="SingleVehicleWorkDurationTest.testGetTransferPlanLineList" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343123000" />
+    <option name="totallyTimeSpent" value="343175000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -786,9 +810,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.21380697" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.25737265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -798,8 +821,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.41985816" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.33475178" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.22553192" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.44539008" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.22553192" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
@@ -912,13 +935,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/aop/TimeAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/RunAfters.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
@@ -1118,9 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1236,13 +1249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SingleVehicleWorkDurationMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1279,11 +1285,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tedu/note/service/impl/SingleVehicleWorkDurationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2843">
-          <caret line="633" lean-forward="true" selection-start-line="633" selection-end-line="633" />
+        <state relative-caret-position="184">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/cn/tedu/note/test/SingleVehicleWorkDurationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
         </state>
       </provider>
     </entry>
