@@ -43,9 +43,15 @@
         <appender-ref ref="activexAppender" />
     </logger>
 
+    <logger name="cn.tedu.note.dao" additivity="false">
+        <level value="debug"></level>
+        <appender-ref ref="myConsole"></appender-ref>
+        <appender-ref ref="myFile"></appender-ref>
+    </logger>
+    
     <!-- 根logger的设置-->
     <root>
-        <priority value ="info"/>
+        <priority value ="debug"/>
         <appender-ref ref="myConsole"/>
         <appender-ref ref="myFile"/>
     </root>
