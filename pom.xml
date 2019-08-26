@@ -231,6 +231,28 @@
     </dependency>
   </dependencies>
 
+  <profiles>
+    <profile>
+      <!-- 开发环境 -->
+      <id>dev</id>
+      <properties>
+        <env>dev</env>
+      </properties>
+    </profile>
+
+    <profile>
+      <!-- 生产环境 -->
+      <id>pro</id>
+      <!-- 默认激活 -->
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <env>pro</env>
+      </properties>
+    </profile>
+  </profiles>
+
   <build>
     <finalName>cloudnote</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -266,5 +288,22 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
+    <!-- 放行的配置文件 可在project下的build标签中配置,也可以在profile中的build标签中配置 -->
+    <filters>
+      <filter>src/main/resources/config/${env}/jdbc.properties</filter>
+    </filters>
+
+    <!-- 需要替换的配置文件路径 (jdbc.properties)-->
+    <!-- 只要在这个路径下 使用到了${env}中的key的 都会替换成${env}中的value-->
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <!-- <includes>
+					<include>**/*</include>
+				</includes> 显示声明directory目录下的特定目录-->
+        <filtering>true</filtering>
+      </resource>
+    </resources>
   </build>
 </project>
