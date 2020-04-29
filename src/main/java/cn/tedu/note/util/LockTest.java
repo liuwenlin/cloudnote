@@ -25,19 +25,43 @@ public class LockTest {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("------Now is operating number! ------");
-        for(int i = 0; i < 100; i++){
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println("CurrentThread " +Thread.currentThread().getName()+ " compute value is: " + incrementNum());
-                }
-            },"Thread" + i).start();
+//        System.out.println("------Now is operating number! ------");
+//        for(int i = 0; i < 100; i++){
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    System.out.println("CurrentThread " +Thread.currentThread().getName()+ " compute value is: " + incrementNum());
+//                }
+//            },"Thread" + i).start();
+//        }
+//
+//        Thread.sleep(3000);
+//
+//        System.out.println("After compute number's value is: " + num);
+
+        int i = 0;
+
+        i = getNum();
+
+        System.out.println("i=" + i);
+    }
+
+    private static int getNum(){
+        int[] a = new int[3];
+        a[0] = 1;
+        a[1] = 2;
+        a[2] = 3;
+        try {
+            a[3] = 4;
+            int i = a[4];
+        } catch (Exception e){
+            System.out.println("运行时异常:");
+            e.printStackTrace();
+            return 2;
+        } finally {
+            System.out.println("最终返回结果:");
+            return 3;
         }
-
-        Thread.sleep(3000);
-
-        System.out.println("After compute number's value is: " + num);
     }
 
 }

@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public abstract class BaseTest {
 
-	protected ClassPathXmlApplicationContext ctx;
+	public ClassPathXmlApplicationContext ctx;
 
 	@Before
 	public void initCtx() {

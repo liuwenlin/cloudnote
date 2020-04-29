@@ -1,11 +1,14 @@
 package cn.tedu.note.test;
 
+import cn.tedu.note.dao.HoauScreenGeocodeDao;
 import cn.tedu.note.dao.SingleVehicleWorkDurationMapper;
 import cn.tedu.note.entity.*;
 import cn.tedu.note.service.IAmapService;
 import cn.tedu.note.service.IGeocodingService;
+import cn.tedu.note.service.IHoauScreenGeocodeService;
 import cn.tedu.note.service.impl.AmapService;
 import cn.tedu.note.service.impl.GeocodingServiceImpl;
+import cn.tedu.note.service.impl.HoauScreenGeocodeService;
 import cn.tedu.note.service.impl.SingleVehicleWorkDurationService;
 import org.apache.log4j.Logger;
 import org.junit.Before;
@@ -32,12 +35,31 @@ public class SingleVehicleWorkDurationTest extends BaseTest {
 
     IGeocodingService geocodingService;
 
+    HoauScreenGeocodeDao hoauScreenGeocodeDao;
+
+    IHoauScreenGeocodeService hoauScreenGeocodeService;
+
     @Before
     public void init(){
-        dao = ctx.getBean("singleVehicleWorkDurationMapper",SingleVehicleWorkDurationMapper.class);
-        amapService = ctx.getBean("amapService",AmapService.class);
-        singleVehicleWorkDurationService = ctx.getBean("singleVehicleWorkDurationService",SingleVehicleWorkDurationService.class);
-        geocodingService = ctx.getBean("geocodingServiceImpl", GeocodingServiceImpl.class);
+//        dao = ctx.getBean("singleVehicleWorkDurationMapper",SingleVehicleWorkDurationMapper.class);
+//        amapService = ctx.getBean("amapService",AmapService.class);
+//        singleVehicleWorkDurationService = ctx.getBean("singleVehicleWorkDurationService",SingleVehicleWorkDurationService.class);
+//        geocodingService = ctx.getBean("geocodingServiceImpl", GeocodingServiceImpl.class);
+        hoauScreenGeocodeDao = ctx.getBean("hoauScreenGeocodeDao",HoauScreenGeocodeDao.class);
+        hoauScreenGeocodeService = ctx.getBean("hoauScreenGeocodeService", HoauScreenGeocodeService.class);
+    }
+
+    @Test
+    public void testHoauScreenGeocode(){
+        LOG.info("------测试开始-------");
+        try {
+            hoauScreenGeocodeService.computeHoauScreenGeocode();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        LOG.info("------测试结束------");
     }
 
     @Test

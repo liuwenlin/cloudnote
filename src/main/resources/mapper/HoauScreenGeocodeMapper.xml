@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+	"-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.tedu.note.dao.HoauScreenGeocodeDao">
+
+	<select id="getHoauScreenGeocodeMapInfo" resultMap="hoauScreenGeocodeList">
+        SELECT DISTINCT SP.ST_ID id,
+                SP.PTJC shortName,
+                OM.CITY city,
+                SP.DZ address,
+                OM.LNG longitude,
+                OM.LAT latitude
+          FROM REPORT_SCREEN_PLATFORM SP
+          LEFT JOIN BUTTERFLY.T_BSE_ORG_MDM OM
+            ON OM.LOGIST_CODE = SP.PTJC
+         WHERE SP.LNG IS NULL
+            OR SP.LAT IS NULL
+	</select>
+
+    <resultMap id="hoauScreenGeocodeList" type="cn.tedu.note.entity.HoauScreenGeocodeEntity">
+        <id property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="shortName" column="shortName" jdbcType="VARCHAR"/>
+        <result property="city" column="city" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="longitude" column="longitude" jdbcType="NUMERIC"/>
+        <result property="latitude" column="latitude" jdbcType="NUMERIC"/>
+    </resultMap>
+
+    <update id="updateHoauScreenGeocode" parameterType="java.util.List">
+        merge into REPORT_SCREEN_PLATFORM SC
+        using (
+        select a.id,a.longitude, a.latitude from
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator="union all">
+            select #{item.id} id,
+                   #{item.longitude,jdbcType=NUMERIC} longitude,
+                   #{item.latitude,jdbcType=NUMERIC} latitude
+            from dual
+        </foreach>
+           a
+        ) s on (s.id = sc.st_id)
+        when matched then
+          update set SC.LNG = s.longitude, SC.LAT = s.latitude
+    </update>
+
+</mapper>

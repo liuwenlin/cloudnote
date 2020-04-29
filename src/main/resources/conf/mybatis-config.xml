@@ -3,8 +3,9 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-    <properties>
-        <property name="dialect" value="oracle" />
+    <!-- 引入动态配置文件,后面的属性标签均可使用(pom中的env变量生产和测试环境的数据库可以根据配置不通进行打包) -->
+    <properties resource="./conf/${env}/jdbc.properties">
+        <property name="dialect" value="${dialect}" />
     </properties>
     <settings>
         <setting name="logImpl" value="LOG4J" />
